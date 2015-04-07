@@ -1,0 +1,209 @@
+/*Old body*/
+/*body {
+     background: #ffffff url(../images/bg.png) no-repeat top left;
+     width: 1024px;
+     height: 660px;
+               
+ }*/
+
+body {
+    /*background-color: #f1f1f1;*/
+    background-color: white;
+
+
+}
+
+.circles {
+    /*drop shadow on circles.. makes site really slow :( */
+/*    -webkit-filter: drop-shadow(3px 7px 3px rgba(0,0,0,0.2));
+    filter:         drop-shadow(3px 7px 3px rgba(0,0,0,0.2));*/
+    position: absolute;
+}
+
+
+#c1 {
+    top: -248px;
+    left: -427px;
+}
+
+#c2 {
+    top: 125px;
+    left: -52px;
+}
+
+#c3 {
+    top: 193px;
+    left: 15px;
+}
+
+#c4 {
+    top: 296px;
+    left: 118px;
+}
+
+#c5 {
+    top: 401px;
+    left: 220px;
+}
+
+
+#contentcarrier {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1024px;
+}
+
+
+#title {
+    width: 548px;
+    height: 119px;
+    position: absolute;
+    top: 400px;
+    left: 150px;
+    background: transparent url(../title.png) no-repeat top left;
+}
+
+.navButton, .cv {
+    margin: 0px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    position: absolute;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    background-color: #f1f1f1;
+    border-radius: 26px;
+    text-decoration: none;
+
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -ms-transition: all 1s ease-out; /* IE10 is actually unprefixed */
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+}
+
+a:visited, a:link{
+    color: black;
+    text-decoration: none;
+}
+
+.navButton p, .cv p {
+    position:absolute;
+    font-size:13px;
+    top:3px;
+    left:52px;
+    text-indent:10px;
+    text-transform:uppercase;
+
+
+    
+}
+
+#cv a:visited {
+    color: black;
+}
+
+#cv a:link {
+    color: black;
+}
+
+.icon {
+    width: 40px; 
+    height: 33px; 
+    top: 10px; 
+    left: 6px;
+    border-radius: 26px;
+    position: relative; 
+}
+
+#homeButton {
+    top:62px;
+    left:175px; 
+
+
+    -webkit-transform-origin: 65px 358px; 
+}
+
+#contactButton {
+    top:87px;
+    left:350px; 
+}
+
+#portfolioButton {
+
+    top: 200px;
+    left: 486px;
+}
+
+#skillsButton {
+    top: 364px;
+    left: 547px;   
+}
+
+#cvButton {
+    top: 537px;
+    left: 516px;
+}
+
+.contentbox {
+    position: absolute;
+    padding: 0px;
+    left: 680px;
+    width: 250px;
+    min-height: 400px;
+    top: 190px;
+    /*background: url(../images/fade.png) repeat-x;*/
+    font-family: "Trebuchet MS", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    text-align: left;
+    color: #222;
+    border-radius: 25px;
+    display: none;
+}
+
+:target {
+    display: block;
+}
+
+.ppimagebox
+{
+    padding-top:25px;
+    padding-bottom:25px;
+    text-align: center;
+    width:100%;
+    }
+    
+.pptextbox
+{
+    margin-left:15px;
+    margin-right:15px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-style: normal;
+    color: Gray;
+}
+
+.imgLinks 
+{
+    display: none;
+}
+
+#measure {
+    position: absolute;
+    left: -68px;
+    top: 1px;
+    z-index: 2;
+    
+}
+
+
+
+
+
+
+
+
+
