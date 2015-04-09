@@ -63,45 +63,9 @@ body {
     background: transparent url(../title.png) no-repeat top left;
 }
 
-.navButton {
-    margin: 0px auto;
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1.4px;
-    position: absolute;
-    cursor: pointer;
-    width: 52px;
-    height: 52px;
-    background-color: #f1f1f1;
-    border-radius: 26px;
-    text-decoration: none;
-
-    -webkit-transition: transform 1s cubic-bezier(.24, .59, .65, .99);
-    -moz-transition: transform 1s cubic-bezier(.24, .59, .65, .99);
-    -ms-transition: transform 1s cubic-bezier(.24, .59, .65, .99); /* IE10 is actually unprefixed */
-    -o-transition: transform 1s cubic-bezier(.24, .59, .65, .99);
-    transition: transform 1s cubic-bezier(.24, .59, .65, .99);
-
-    /* cubic-bezier(.24, .59, .65, .99)*/
-}
-
 a:visited, a:link{
     color: black;
     text-decoration: none;
-}
-
-.navButton p {
-    position:absolute;
-    font-size:13px;
-    top:3px;
-    left:52px;
-    text-indent:10px;
-    text-transform:uppercase;
-
-    transform-origin: -28px 10px;
-
-    transition: transform 1s ease-out;
 }
 
 #cv a:visited {
@@ -121,33 +85,178 @@ a:visited, a:link{
     position: relative; 
 }
 
-#homeButton {
-    top:62px;
-    left:175px; 
+.navButton {
+    margin: 0px auto;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    position: absolute;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    background-color: #f1f1f1;
+    border-radius: 26px;
+    text-decoration: none;
+    opacity: 1;
 
+    -webkit-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
+    -moz-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
+    -ms-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s; /* IE10 is actually unprefixed */
+    -o-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
+    transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
 
     -webkit-transform-origin: 65px 358px; 
+    -moz-transform-origin: 65px 358px; 
+    -ms-transform-origin: 65px 358px; 
+    -o-transform-origin: 65px 358px; 
+    transform-origin: 65px 358px; 
+
+}
+
+.hiddenButtons {
+    -webkit-transform: rotate(-50deg) !important;
+    -moz-transform: rotate(-50deg) !important;
+    -ms-transform: rotate(-50deg) !important;
+    -o-transform: rotate(-50deg) !important;
+    transform: rotate(-50deg) !important;
+
+    opacity: 0;
+}
+
+.navButton p {
+    position:absolute;
+    font-size:13px;
+    top: 3px;
+    left: 52px;
+    text-indent:10px;
+    text-transform:uppercase;
+
+    -webkit-transform-origin: -28px 10px;
+    -moz-transform-origin: -28px 10px;
+    -ms-transform-origin: -28px 10px;
+    -o-transform-origin: -28px 10px;
+    transform-origin: -28px 10px;
+
+    -webkit-transition: transform 1s ease-out, opacity 0.2s linear;
+    -moz-transition: transform 1s ease-out, opacity 0.2s linear;
+    -ms-transition: transform 1s ease-out, opacity 0.2s linear;
+    -o-transition: transform 1s ease-out, opacity 0.2s linear;
+    transition: transform 1s ease-out, opacity 0.2s linear;
+}
+
+#homeButton {
+    top: 62px;
+    left: 175px; 
+
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
 #contactButton {
-    top:87px;
-    left:350px; 
+    top: 62px;
+    left: 175px;
+
+    -webkit-transform: rotate(30.5deg);
+    -moz-transform: rotate(30.5deg);
+    -ms-transform: rotate(30.5deg);
+    -o-transform: rotate(30.5deg);
+    transform: rotate(30.5deg);
+
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+#contactButton p, #contactButton img {
+    -webkit-transform: rotate(-30.5deg);
+    -moz-transform: rotate(-30.5deg);
+    -ms-transform: rotate(-30.5deg);
+    -o-transform: rotate(-30.5deg);
+    transform: rotate(-30.5deg);
 }
 
 #portfolioButton {
+    top: 62px;
+    left: 175px;
 
-    top: 200px;
-    left: 486px;
+    -webkit-transform: rotate(61deg);
+    -moz-transform: rotate(61deg);
+    -ms-transform: rotate(61deg);
+    -o-transform: rotate(61deg);
+    transform: rotate(61deg);
+
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
+
+#portfolioButton p, #portfolioButton img {
+    -webkit-transform: rotate(-61deg);
+    -moz-transform: rotate(-61deg);
+    -ms-transform: rotate(-61deg);
+    -o-transform: rotate(-61deg);
+    transform: rotate(-61deg);
+}
+
 
 #skillsButton {
-    top: 364px;
-    left: 547px;   
+    top: 62px;
+    left: 175px;
+
+    -webkit-transform: rotate(91.5deg);
+    -moz-transform: rotate(91.5deg);
+    -ms-transform: rotate(91.5deg);
+    -o-transform: rotate(91.5deg);
+    transform: rotate(91.5deg);
+
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+
 }
 
+#skillsButton p, #skillsButton img {
+    -webkit-transform: rotate(-91.5deg);
+    -moz-transform: rotate(-91.5deg);
+    -ms-transform: rotate(-91.5deg);
+    -o-transform: rotate(-91.5deg);
+    transform: rotate(-91.5deg);
+}
+
+
 #cvButton {
-    top: 537px;
-    left: 516px;
+    top: 62px;
+    left: 175px;
+
+    -webkit-transform: rotate(122deg);
+    -moz-transform: rotate(122deg);
+    -ms-transform: rotate(122deg);
+    -o-transform: rotate(122deg);
+    transform: rotate(122deg);
+
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+#cvButton p, #cvButton img {
+    -webkit-transform: rotate(-122deg);
+    -moz-transform: rotate(-122deg);
+    -ms-transform: rotate(-122deg);
+    -o-transform: rotate(-122deg);
+    transform: rotate(-122deg);
 }
 
 .contentbox {

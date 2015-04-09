@@ -21,6 +21,18 @@ $(document).ready(function () {
 });
 
 
+function hideButtons() {
+    $('.navButton').addClass('hiddenButtons');
+    $('.navButton p').css('opacity', '0');
+}
+
+function showButtons() {
+    $('.navButton').removeClass('hiddenButtons');
+    $('.navButton p').css('opacity', '1');
+}
+
+
+
 //Google Analytics
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-35367691-1']);
