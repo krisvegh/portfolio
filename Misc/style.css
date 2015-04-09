@@ -83,6 +83,12 @@ a:visited, a:link{
     left: 6px;
     border-radius: 26px;
     position: relative; 
+
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.24, .59, .65, .99);
+    -moz-transition: -moz-transform 1s cubic-bezier(.24, .59, .65, .99);
+    -ms-transition: -ms-transform 1s cubic-bezier(.24, .59, .65, .99); /* IE10 is actually unprefixed */
+    -o-transition: -o-transform 1s cubic-bezier(.24, .59, .65, .99);
+    transition: transform 1s cubic-bezier(.24, .59, .65, .99);
 }
 
 .navButton {
@@ -100,18 +106,17 @@ a:visited, a:link{
     text-decoration: none;
     opacity: 1;
 
-    -webkit-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
-    -moz-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
-    -ms-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s; /* IE10 is actually unprefixed */
-    -o-transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
-    transition: transform 2s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
+    -webkit-transition: -webkit-transform 1s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
+    -moz-transition: -moz-transform 1s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
+    -ms-transition: -ms-transform 1s cubic-bezier(.24, .59, .65, .99), opacity 0.5s; /* IE10 is actually unprefixed */
+    -o-transition: -o-transform 1s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
+    transition: transform 1s cubic-bezier(.24, .59, .65, .99), opacity 0.5s;
 
     -webkit-transform-origin: 65px 358px; 
     -moz-transform-origin: 65px 358px; 
     -ms-transform-origin: 65px 358px; 
     -o-transform-origin: 65px 358px; 
     transform-origin: 65px 358px; 
-
 }
 
 .hiddenButtons {
@@ -122,6 +127,14 @@ a:visited, a:link{
     transform: rotate(-50deg) !important;
 
     opacity: 0;
+}
+
+.hiddenIcons {
+    -webkit-transform: rotate(50deg) !important;
+    -moz-transform: rotate(50deg) !important;
+    -ms-transform: rotate(50deg) !important;
+    -o-transform: rotate(50deg) !important;
+    transform: rotate(50deg) !important; 
 }
 
 .navButton p {
@@ -138,10 +151,10 @@ a:visited, a:link{
     -o-transform-origin: -28px 10px;
     transform-origin: -28px 10px;
 
-    -webkit-transition: transform 1s ease-out, opacity 0.2s linear;
-    -moz-transition: transform 1s ease-out, opacity 0.2s linear;
-    -ms-transition: transform 1s ease-out, opacity 0.2s linear;
-    -o-transition: transform 1s ease-out, opacity 0.2s linear;
+    -webkit-transition: -webkit-transform 1s ease-out, opacity 0.2s linear;
+    -moz-transition: -moz-transform 1s ease-out, opacity 0.2s linear;
+    -ms-transition: -ms-transform 1s ease-out, opacity 0.2s linear;
+    -o-transition: -o-transform 1s ease-out, opacity 0.2s linear;
     transition: transform 1s ease-out, opacity 0.2s linear;
 }
 
@@ -181,6 +194,14 @@ a:visited, a:link{
     transform: rotate(-30.5deg);
 }
 
+#contactButton img {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
 #portfolioButton {
     top: 62px;
     left: 175px;
@@ -204,6 +225,14 @@ a:visited, a:link{
     -ms-transform: rotate(-61deg);
     -o-transform: rotate(-61deg);
     transform: rotate(-61deg);
+}
+
+#portfolioButton img {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
 }
 
 
@@ -233,6 +262,13 @@ a:visited, a:link{
     transform: rotate(-91.5deg);
 }
 
+#skillsButton img {
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
 
 #cvButton {
     top: 62px;
@@ -257,6 +293,14 @@ a:visited, a:link{
     -ms-transform: rotate(-122deg);
     -o-transform: rotate(-122deg);
     transform: rotate(-122deg);
+}
+
+#cvButton img {
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    -o-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 
 .contentbox {

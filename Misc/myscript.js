@@ -22,12 +22,14 @@ $(document).ready(function () {
 
 
 function hideButtons() {
+    $('.icon').addClass('hiddenIcons');
     $('.navButton').addClass('hiddenButtons');
     $('.navButton p').css('opacity', '0');
 }
 
 function showButtons() {
     $('.navButton').removeClass('hiddenButtons');
+    $('.icon').removeClass('hiddenIcons');
     $('.navButton p').css('opacity', '1');
 }
 
