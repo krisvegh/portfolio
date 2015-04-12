@@ -32,8 +32,8 @@ $(document).ready(function () {
     $('.navButton').on('click', function(event) {
         event.preventDefault();
         href = $(this).attr('href');
-
         hideButtons();
+        changeMiddleImage(href.substring(1));
     });
 
     $('#backButton').on('click', function(event) {
@@ -41,12 +41,12 @@ $(document).ready(function () {
         showButtons();
     });
 
-    rotateButtons(0, 1);
+    animateButtons(0, 1);
 
 
 });
 
-function rotateButtons(deg, sca) {
+function animateButtons(deg, sca) {
     $('.navButton').each(function() {
         currentDeg = getRotationDegrees($(this));
         $(this).css({
@@ -71,15 +71,22 @@ function rotateButtons(deg, sca) {
 }
 
 function hideButtons() {
-    rotateButtons(180, 0.1);
+    animateButtons(180, 0.1);
     $('.navButton p').css('opacity', '0');
+    $('#title').fadeOut(400);
+    $('#middle, #backButton').removeClass('scaleToZero');
 }
 
 function showButtons() {
-    rotateButtons(-180, 1);
+    animateButtons(-180, 1);
     $('.navButton p').css('opacity', '1');
+    $('#title').fadeIn(1800);
+    $('#middle, #backButton').addClass('scaleToZero');
 }
 
+function changeMiddleImage(href) {
+    $('#middle').css('backgroundImage', 'url(images/' + href + '.svg)');
+}
 
 
 //Google Analytics

@@ -1,21 +1,13 @@
-/*Old body*/
-/*body {
-     background: #ffffff url(../images/bg.png) no-repeat top left;
-     width: 1024px;
-     height: 660px;
-               
- }*/
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,700|Poiret+One);
 
 body {
     background-color: white;
+    overflow: hidden;
 
 
 }
 
 .circles {
-    /*drop shadow on circles.. makes site really slow :( */
-/*    -webkit-filter: drop-shadow(3px 7px 3px rgba(0,0,0,0.2));
-    filter:         drop-shadow(3px 7px 3px rgba(0,0,0,0.2));*/
     position: absolute;
 }
 
@@ -45,6 +37,27 @@ body {
     left: 220px;
 }
 
+#middle {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: #f1f1f1;
+	left: 192px;
+	top: 370px;
+	/*background-image: url(../images/home.svg);*/
+	background-size: 60%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 2;
+
+    -webkit-transition: -webkit-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+    -moz-transition: -moz-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+    -ms-transition: -ms-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.5s; /* IE10 is actually unprefixed */
+    -o-transition: -o-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+    transition: transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+}
+
 
 #contentcarrier {
     position: relative;
@@ -56,12 +69,22 @@ body {
 
 
 #title {
-    width: 548px;
-    height: 119px;
-    position: absolute;
-    top: 400px;
-    left: 150px;
-    background: transparent url(../title.png) no-repeat top left;
+	font-family: 'Poiret One', sans-serif;
+	width: 548px;
+	height: 119px;
+	position: absolute;
+	top: 348px;
+	left: 150px;
+}
+
+h1 {
+	font-size: 57px;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 0px;
 }
 
 a:visited, a:link{
@@ -77,12 +100,13 @@ a:visited, a:link{
     color: black;
 }
 
+
+
 .icon {
     width: 40px; 
     height: 33px; 
     top: 10px; 
     left: 6px;
-    border-radius: 26px;
     position: relative; 
 
     -webkit-transition: -webkit-transform 2s cubic-bezier(.17, .67, .17, 1);
@@ -94,9 +118,9 @@ a:visited, a:link{
 
 .navButton {
     margin: 0px auto;
-    font-family: "Trebuchet MS", sans-serif;
+    font-family: "Dosis", sans-serif;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400;
     letter-spacing: 1.4px;
     position: absolute;
     cursor: pointer;
@@ -120,29 +144,59 @@ a:visited, a:link{
     transform-origin: 65px 358px; 
 }
 
-.hiddenButtons {
-/*    -webkit-transform: scale(.5) !important;
-    -moz-transform: scale(.5) !important;
-    -ms-transform: scale(.5) !important;
-    -o-transform: scale(.5) !important;
-    transform: scale(.5) !important;*/
+#backButton {
+    top: 87px;
+    left: 345px;
+
+    margin: 0px auto;
+    font-family: "Dosis", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.4px;
+    position: absolute;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    background-color: #f1f1f1;
+    border-radius: 26px;
+    text-decoration: none;
+
+    -webkit-transition: -webkit-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
+    -moz-transition: -moz-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
+    -ms-transition: -ms-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s; /* IE10 is actually unprefixed */
+    -o-transition: -o-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
+    transition: transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
 }
 
-.hiddenIcons {
-    -webkit-transform: rotate(50deg) !important;
-    -moz-transform: rotate(50deg) !important;
-    -ms-transform: rotate(50deg) !important;
-    -o-transform: rotate(50deg) !important;
-    transform: rotate(50deg) !important; 
+#backButton img {
+	width: 40px; 
+    height: 33px; 
+    top: 10px; 
+    left: 6px;
+    position: relative; 
 }
 
-.navButton p {
+.scaleToZero {
+	-webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);  
+
+    -webkit-transition-delay: 0s !important;
+    -moz-transition-delay: 0s !important;
+    -ms-transition-delay: 0s !important;
+    -o-transition-delay: 0s !important;
+    transition-delay: 0s !important;
+}
+
+.navButton p, #backButton p {
     position:absolute;
     font-size:13px;
     top: 3px;
     left: 52px;
     text-indent:10px;
-    text-transform:uppercase;
+    /*text-transform:uppercase;*/
 
     -webkit-transform-origin: -28px 10px;
     -moz-transform-origin: -28px 10px;
@@ -161,11 +215,11 @@ a:visited, a:link{
     top: 62px;
     left: 175px; 
 
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
 
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
@@ -175,22 +229,22 @@ a:visited, a:link{
 }
 
 #homeButton p, #homeButton img {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg);
 }
 
 #contactButton {
     top: 62px;
     left: 175px;
 
-    -webkit-transform: rotate(30.5deg);
-    -moz-transform: rotate(30.5deg);
-    -ms-transform: rotate(30.5deg);
-    -o-transform: rotate(30.5deg);
-    transform: rotate(30.5deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
 
     -webkit-transition-delay: 0.1s;
     -moz-transition-delay: 0.1s;
@@ -200,11 +254,11 @@ a:visited, a:link{
 }
 
 #contactButton p, #contactButton img {
-    -webkit-transform: rotate(-30.5deg);
-    -moz-transform: rotate(-30.5deg);
-    -ms-transform: rotate(-30.5deg);
-    -o-transform: rotate(-30.5deg);
-    transform: rotate(-30.5deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
 }
 
 #contactButton img {
@@ -219,11 +273,11 @@ a:visited, a:link{
     top: 62px;
     left: 175px;
 
-    -webkit-transform: rotate(61deg);
-    -moz-transform: rotate(61deg);
-    -ms-transform: rotate(61deg);
-    -o-transform: rotate(61deg);
-    transform: rotate(61deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
 
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
@@ -233,11 +287,11 @@ a:visited, a:link{
 }
 
 #portfolioButton p, #portfolioButton img {
-    -webkit-transform: rotate(-61deg);
-    -moz-transform: rotate(-61deg);
-    -ms-transform: rotate(-61deg);
-    -o-transform: rotate(-61deg);
-    transform: rotate(-61deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+    transform: rotate(-60deg);
 }
 
 #portfolioButton img {
@@ -253,11 +307,11 @@ a:visited, a:link{
     top: 62px;
     left: 175px;
 
-    -webkit-transform: rotate(91.5deg);
-    -moz-transform: rotate(91.5deg);
-    -ms-transform: rotate(91.5deg);
-    -o-transform: rotate(91.5deg);
-    transform: rotate(91.5deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
 
     -webkit-transition-delay: 0.3s;
     -moz-transition-delay: 0.3s;
@@ -268,11 +322,11 @@ a:visited, a:link{
 }
 
 #skillsButton p, #skillsButton img {
-    -webkit-transform: rotate(-91.5deg);
-    -moz-transform: rotate(-91.5deg);
-    -ms-transform: rotate(-91.5deg);
-    -o-transform: rotate(-91.5deg);
-    transform: rotate(-91.5deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 #skillsButton img {
@@ -287,11 +341,11 @@ a:visited, a:link{
     top: 62px;
     left: 175px;
 
-    -webkit-transform: rotate(122deg);
-    -moz-transform: rotate(122deg);
-    -ms-transform: rotate(122deg);
-    -o-transform: rotate(122deg);
-    transform: rotate(122deg);
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg);
 
     -webkit-transition-delay: 0.4s;
     -moz-transition-delay: 0.4s;
@@ -301,11 +355,11 @@ a:visited, a:link{
 }
 
 #cvButton p, #cvButton img {
-    -webkit-transform: rotate(-122deg);
-    -moz-transform: rotate(-122deg);
-    -ms-transform: rotate(-122deg);
-    -o-transform: rotate(-122deg);
-    transform: rotate(-122deg);
+    -webkit-transform: rotate(-120deg);
+    -moz-transform: rotate(-120deg);
+    -ms-transform: rotate(-120deg);
+    -o-transform: rotate(-120deg);
+    transform: rotate(-120deg);
 }
 
 #cvButton img {
@@ -314,41 +368,6 @@ a:visited, a:link{
     -ms-transition-delay: 0.4s;
     -o-transition-delay: 0.4s;
     transition-delay: 0.4s;
-}
-
-#backButton {
-    top: 62px;
-    left: 175px;
-
-    -webkit-transform: rotate(152.5deg);
-    -moz-transform: rotate(152.5deg);
-    -ms-transform: rotate(152.5deg);
-    -o-transform: rotate(152.5deg);
-    transform: rotate(152.5deg);
-
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay: 0.5s;
-    -ms-transition-delay: 0.5s;
-    -o-transition-delay: 0.5s;
-    transition-delay: 0.5s;
-
-    /*opacity: 1 !important; */
-}
-
-#backButton p, #backButton img {
-    -webkit-transform: rotate(-152deg);
-    -moz-transform: rotate(-152deg);
-    -ms-transform: rotate(-152deg);
-    -o-transform: rotate(-152deg);
-    transform: rotate(-152deg);
-}
-
-#backButton img {
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay: 0.5s;
-    -ms-transition-delay: 0.5s;
-    -o-transition-delay: 0.5s;
-    transition-delay: 0.5s;
 }
 
 .contentbox {
