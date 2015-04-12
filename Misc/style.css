@@ -541,16 +541,17 @@ a:visited, a:link{
 .contentbox {
     position: absolute;
     padding: 0px;
-    left: 590px;
-    width: 250px;
-    min-height: 400px;
+    left: 500px;
+    width: 300px;
+    height: 300px;
+    border-radius: 150px;
     top: 190px;
-    font-family: "Trebuchet MS", sans-serif;
-    font-style: normal;
+    font-family: "Dosis", sans-serif;
     font-size: 13px;
-    text-align: left;
-    color: #222;
-    border-radius: 25px;
+    text-align: center;
+    color: #000000;
+    background-color: rgba(20, 20, 20, 0.05);
+    display: table;
 
     -webkit-transition: -webkit-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
     -moz-transition: -moz-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
@@ -565,25 +566,13 @@ a:visited, a:link{
     transform-origin: -350px 230px; 
 }
 
-:target {
-    display: block;
+.contentbox #tablecell {
+	display: table-cell;
+	vertical-align: middle;
 }
 
-.ppimagebox
-{
-    padding-top:25px;
-    padding-bottom:25px;
-    text-align: center;
-    width:100%;
-    }
-    
-.pptextbox
-{
-    margin-left:15px;
-    margin-right:15px;
-    font-family: "Trebuchet MS", sans-serif;
-    font-style: normal;
-    color: Gray;
+:target {
+    display: block;
 }
 
 .imgLinks 
@@ -591,12 +580,21 @@ a:visited, a:link{
     display: none;
 }
 
+#portfolio {
+	overflow: hidden;
+}
+
+#accordion {
+	height: 235px !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 #measure {
     position: absolute;
     left: -68px;
     top: 1px;
     z-index: 2;
-    
 }
 
 
