@@ -1,11 +1,3 @@
- //fadeinonload
-$(window).load (function() {
-    // $(".navButton").css('display', 'none');
-    // $(".navButton").each(function(i) {
-    //     $(this).delay(i * 300).fadeIn();
-    // });
-});
-
 //get "transform: rotate" value
 function getRotationDegrees(obj) {
     var matrix = obj.css("-webkit-transform") ||
@@ -22,7 +14,6 @@ function getRotationDegrees(obj) {
     return (angle < 0) ? angle + 360 : angle;
 }
 
-//Accordion
 $(document).ready(function () {
     $("#accordion").accordion({
         collapsible: true, heightStyle: "content", active: false 
@@ -32,17 +23,20 @@ $(document).ready(function () {
     $('.navButton').on('click', function(event) {
         event.preventDefault();
         href = $(this).attr('href');
-        hideButtons();
+        hideMenu();
         changeMiddleImage(href.substring(1));
+        showContent(href);
+        
     });
 
     $('#backButton').on('click', function(event) {
         event.preventDefault();
-        showButtons();
+        showMenu();
+        hideContent();
     });
 
     animateButtons(0, 1);
-
+    breathe();
 
 });
 
@@ -70,14 +64,14 @@ function animateButtons(deg, sca) {
     });
 }
 
-function hideButtons() {
+function hideMenu() {
     animateButtons(180, 0.1);
     $('.navButton p').css('opacity', '0');
     $('#title').fadeOut(400);
     $('#middle, #backButton').removeClass('scaleToZero');
 }
 
-function showButtons() {
+function showMenu() {
     animateButtons(-180, 1);
     $('.navButton p').css('opacity', '1');
     $('#title').fadeIn(1800);
@@ -86,6 +80,21 @@ function showButtons() {
 
 function changeMiddleImage(href) {
     $('#middle').css('backgroundImage', 'url(images/' + href + '.svg)');
+}
+
+function showContent(content) {
+    $(content).removeClass('scaleToZero');
+}
+
+function hideContent() {
+    $('.contentbox').addClass('scaleToZero');
+}
+
+function breathe() {
+    $('.circles').addClass('animation_breathe');
+    $('#c1').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
+        $('.circles').removeClass('animation_breathe');
+    })
 }
 
 

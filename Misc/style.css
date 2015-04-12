@@ -11,30 +11,198 @@ body {
     position: absolute;
 }
 
+.animation_breathe {
+    -webkit-animation: breathe 1s ease 1;
+    -moz-animation: breathe 1s ease 1;
+    -ms-animation: breathe 1s ease 1;
+    -o-animation: breathe 1s ease 1;
+    animation: breathe 1s ease 1;
+}
+
+@-webkit-keyframes breathe {
+	0% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1);  
+	}
+
+	50% {
+		-webkit-transform: scale(0.9);
+	    -moz-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	    -o-transform: scale(0.9);
+	    transform: scale(0.9); 
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1); 
+	}
+}
+
+@-moz-keyframes breathe {
+	0% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1);  
+	}
+
+	50% {
+		-webkit-transform: scale(0.9);
+	    -moz-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	    -o-transform: scale(0.9);
+	    transform: scale(0.9); 
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1); 
+	}
+}
+
+@-ms-keyframes breathe {
+	0% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1);  
+	}
+
+	50% {
+		-webkit-transform: scale(0.9);
+	    -moz-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	    -o-transform: scale(0.9);
+	    transform: scale(0.9); 
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1); 
+	}
+}
+
+@-o-keyframes breathe {
+	0% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1);  
+	}
+
+	50% {
+		-webkit-transform: scale(0.9);
+	    -moz-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	    -o-transform: scale(0.9);
+	    transform: scale(0.9); 
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1); 
+	}
+}
+
+@keyframes breathe {
+	0% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1);  
+	}
+
+	50% {
+		-webkit-transform: scale(0.9);
+	    -moz-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	    -o-transform: scale(0.9);
+	    transform: scale(0.9); 
+	}
+
+	100% {
+		-webkit-transform: scale(1);
+	    -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	    -o-transform: scale(1);
+	    transform: scale(1); 
+	}
+}
+
 
 #c1 {
     top: -248px;
     left: -427px;
+
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -ms-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 #c2 {
     top: 125px;
     left: -52px;
+
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;    
 }
 
 #c3 {
     top: 193px;
     left: 15px;
+
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 #c4 {
     top: 296px;
     left: 118px;
+
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    animation-delay: 0.2s;
 }
 
 #c5 {
     top: 401px;
     left: 220px;
+
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    -ms-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
 
 #middle {
@@ -183,11 +351,11 @@ a:visited, a:link{
     -o-transform: scale(0);
     transform: scale(0);  
 
-    -webkit-transition-delay: 0s !important;
-    -moz-transition-delay: 0s !important;
-    -ms-transition-delay: 0s !important;
-    -o-transition-delay: 0s !important;
-    transition-delay: 0s !important;
+    -webkit-transition: -webkit-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    -moz-transition: -moz-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    -ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
+    -o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
 }
 
 .navButton p, #backButton p {
@@ -204,11 +372,11 @@ a:visited, a:link{
     -o-transform-origin: -28px 10px;
     transform-origin: -28px 10px;
 
-    -webkit-transition: -webkit-transform 1s ease-out, opacity 2s ease 2s;
-    -moz-transition: -moz-transform 1s ease-out, opacity 2s ease 2s;
-    -ms-transition: -ms-transform 1s ease-out, opacity 2s ease 2s;
-    -o-transition: -o-transform 1s ease-out, opacity 2s ease 2s;
-    transition: transform 1s ease-out, opacity 2s ease 2s;
+    -webkit-transition: -webkit-transform 1s ease-out, opacity 2s ease 1s;
+    -moz-transition: -moz-transform 1s ease-out, opacity 2s ease 1s;
+    -ms-transition: -ms-transform 1s ease-out, opacity 2s ease 1s;
+    -o-transition: -o-transform 1s ease-out, opacity 2s ease 1s;
+    transition: transform 1s ease-out, opacity 2s ease 1s;
 }
 
 #homeButton {
@@ -373,18 +541,28 @@ a:visited, a:link{
 .contentbox {
     position: absolute;
     padding: 0px;
-    left: 680px;
+    left: 590px;
     width: 250px;
     min-height: 400px;
     top: 190px;
-    /*background: url(../images/fade.png) repeat-x;*/
     font-family: "Trebuchet MS", sans-serif;
     font-style: normal;
     font-size: 13px;
     text-align: left;
     color: #222;
     border-radius: 25px;
-    display: none;
+
+    -webkit-transition: -webkit-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+    -moz-transition: -moz-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+    -ms-transition: -ms-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s; /* IE10 is actually unprefixed */
+    -o-transition: -o-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+    transition: transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+
+    -webkit-transform-origin: -350px 230px; 
+    -moz-transform-origin: -350px 230px; 
+    -ms-transform-origin: -350px 230px; 
+    -o-transform-origin: -350px 230px; 
+    transform-origin: -350px 230px; 
 }
 
 :target {
