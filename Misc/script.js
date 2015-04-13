@@ -33,6 +33,7 @@ $(document).ready(function () {
         event.preventDefault();
         showMenu();
         hideContent();
+        breathe();
     });
 
     animateButtons(0, 1);
@@ -65,14 +66,14 @@ function animateButtons(deg, sca) {
 }
 
 function hideMenu() {
-    animateButtons(180, 0.1);
+    animateButtons(125, 0.2);
     $('.navButton p').css('opacity', '0');
     $('#title').fadeOut(400);
     $('#middle, #backButton').removeClass('scaleToZero');
 }
 
 function showMenu() {
-    animateButtons(-180, 1);
+    animateButtons(-125, 1);
     $('.navButton p').css('opacity', '1');
     $('#title').fadeIn(1800);
     $('#middle, #backButton').addClass('scaleToZero');

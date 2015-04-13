@@ -1,0 +1,55 @@
+.trans_delay_0ms {
+    -webkit-transition-delay: 0.0s;
+    -moz-transition-delay: 0.0s;
+    -ms-transition-delay: 0.0s;
+    -o-transition-delay: 0.0s;
+    transition-delay: 0.0s;	
+}
+
+
+.trans_delay_1ms {
+    -webkit-transition-delay: 0.1s;
+    -moz-transition-delay: 0.1s;
+    -ms-transition-delay: 0.1s;
+    -o-transition-delay: 0.1s;
+    transition-delay: 0.1s;	
+}
+
+.trans_delay_2ms {
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -ms-transition-delay: 0.2s;
+    -o-transition-delay: 0.12;
+    transition-delay: 0.2s;	
+}
+
+.trans_delay_3ms {
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    -ms-transition-delay: 0.3s;
+    -o-transition-delay: 0.13;
+    transition-delay: 0.3s;	
+}
+
+.trans_delay_4ms {
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    -ms-transition-delay: 0.4s;
+    -o-transition-delay: 0.14;
+    transition-delay: 0.4s;	
+}
+
+.scaleToZero {
+	-webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);  
+
+    -webkit-transition: -webkit-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    -moz-transition: -moz-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    -ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
+    -o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+}
+

@@ -11,145 +11,6 @@ body {
     position: absolute;
 }
 
-.animation_breathe {
-    -webkit-animation: breathe 1s ease 1;
-    -moz-animation: breathe 1s ease 1;
-    -ms-animation: breathe 1s ease 1;
-    -o-animation: breathe 1s ease 1;
-    animation: breathe 1s ease 1;
-}
-
-@-webkit-keyframes breathe {
-	0% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1);  
-	}
-
-	50% {
-		-webkit-transform: scale(0.9);
-	    -moz-transform: scale(0.9);
-	    -ms-transform: scale(0.9);
-	    -o-transform: scale(0.9);
-	    transform: scale(0.9); 
-	}
-
-	100% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1); 
-	}
-}
-
-@-moz-keyframes breathe {
-	0% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1);  
-	}
-
-	50% {
-		-webkit-transform: scale(0.9);
-	    -moz-transform: scale(0.9);
-	    -ms-transform: scale(0.9);
-	    -o-transform: scale(0.9);
-	    transform: scale(0.9); 
-	}
-
-	100% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1); 
-	}
-}
-
-@-ms-keyframes breathe {
-	0% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1);  
-	}
-
-	50% {
-		-webkit-transform: scale(0.9);
-	    -moz-transform: scale(0.9);
-	    -ms-transform: scale(0.9);
-	    -o-transform: scale(0.9);
-	    transform: scale(0.9); 
-	}
-
-	100% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1); 
-	}
-}
-
-@-o-keyframes breathe {
-	0% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1);  
-	}
-
-	50% {
-		-webkit-transform: scale(0.9);
-	    -moz-transform: scale(0.9);
-	    -ms-transform: scale(0.9);
-	    -o-transform: scale(0.9);
-	    transform: scale(0.9); 
-	}
-
-	100% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1); 
-	}
-}
-
-@keyframes breathe {
-	0% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1);  
-	}
-
-	50% {
-		-webkit-transform: scale(0.9);
-	    -moz-transform: scale(0.9);
-	    -ms-transform: scale(0.9);
-	    -o-transform: scale(0.9);
-	    transform: scale(0.9); 
-	}
-
-	100% {
-		-webkit-transform: scale(1);
-	    -moz-transform: scale(1);
-	    -ms-transform: scale(1);
-	    -o-transform: scale(1);
-	    transform: scale(1); 
-	}
-}
-
-
 #c1 {
     top: -248px;
     left: -427px;
@@ -344,27 +205,12 @@ a:visited, a:link{
     position: relative; 
 }
 
-.scaleToZero {
-	-webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);  
-
-    -webkit-transition: -webkit-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    -moz-transition: -moz-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    -ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
-    -o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-}
-
 .navButton p, #backButton p {
     position:absolute;
     font-size:13px;
     top: 3px;
     left: 52px;
     text-indent:10px;
-    /*text-transform:uppercase;*/
 
     -webkit-transform-origin: -28px 10px;
     -moz-transform-origin: -28px 10px;
@@ -388,12 +234,6 @@ a:visited, a:link{
     -ms-transform: rotate(1deg);
     -o-transform: rotate(1deg);
     transform: rotate(1deg);
-
-    -webkit-transition-delay: 0s;
-    -moz-transition-delay: 0s;
-    -ms-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
 }
 
 #homeButton p, #homeButton img {
@@ -413,12 +253,6 @@ a:visited, a:link{
     -ms-transform: rotate(30deg);
     -o-transform: rotate(30deg);
     transform: rotate(30deg);
-
-    -webkit-transition-delay: 0.1s;
-    -moz-transition-delay: 0.1s;
-    -ms-transition-delay: 0.1s;
-    -o-transition-delay: 0.1s;
-    transition-delay: 0.1s;
 }
 
 #contactButton p, #contactButton img {
@@ -427,14 +261,6 @@ a:visited, a:link{
     -ms-transform: rotate(-30deg);
     -o-transform: rotate(-30deg);
     transform: rotate(-30deg);
-}
-
-#contactButton img {
-    -webkit-transition-delay: 0.1s;
-    -moz-transition-delay: 0.1s;
-    -ms-transition-delay: 0.1s;
-    -o-transition-delay: 0.1s;
-    transition-delay: 0.1s;
 }
 
 #portfolioButton {
@@ -446,12 +272,6 @@ a:visited, a:link{
     -ms-transform: rotate(60deg);
     -o-transform: rotate(60deg);
     transform: rotate(60deg);
-
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -ms-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
 }
 
 #portfolioButton p, #portfolioButton img {
@@ -462,15 +282,6 @@ a:visited, a:link{
     transform: rotate(-60deg);
 }
 
-#portfolioButton img {
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -ms-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-}
-
-
 #skillsButton {
     top: 62px;
     left: 175px;
@@ -480,13 +291,6 @@ a:visited, a:link{
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
-
-    -webkit-transition-delay: 0.3s;
-    -moz-transition-delay: 0.3s;
-    -ms-transition-delay: 0.3s;
-    -o-transition-delay: 0.3s;
-    transition-delay: 0.3s;
-
 }
 
 #skillsButton p, #skillsButton img {
@@ -495,14 +299,6 @@ a:visited, a:link{
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
-}
-
-#skillsButton img {
-    -webkit-transition-delay: 0.3s;
-    -moz-transition-delay: 0.3s;
-    -ms-transition-delay: 0.3s;
-    -o-transition-delay: 0.3s;
-    transition-delay: 0.3s;
 }
 
 #cvButton {
@@ -514,12 +310,6 @@ a:visited, a:link{
     -ms-transform: rotate(120deg);
     -o-transform: rotate(120deg);
     transform: rotate(120deg);
-
-    -webkit-transition-delay: 0.4s;
-    -moz-transition-delay: 0.4s;
-    -ms-transition-delay: 0.4s;
-    -o-transition-delay: 0.4s;
-    transition-delay: 0.4s;
 }
 
 #cvButton p, #cvButton img {
@@ -528,14 +318,6 @@ a:visited, a:link{
     -ms-transform: rotate(-120deg);
     -o-transform: rotate(-120deg);
     transform: rotate(-120deg);
-}
-
-#cvButton img {
-    -webkit-transition-delay: 0.4s;
-    -moz-transition-delay: 0.4s;
-    -ms-transition-delay: 0.4s;
-    -o-transition-delay: 0.4s;
-    transition-delay: 0.4s;
 }
 
 .contentbox {
@@ -596,12 +378,3 @@ a:visited, a:link{
     top: 1px;
     z-index: 2;
 }
-
-
-
-
-
-
-
-
-
