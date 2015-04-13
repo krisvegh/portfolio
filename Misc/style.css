@@ -79,6 +79,7 @@ body {
 	background-position: center center;
 	background-repeat: no-repeat;
 	z-index: 2;
+	box-shadow: inset 3px 3px 3px #C0C0C0;
 
     -webkit-transition: -webkit-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
     -moz-transition: -moz-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.5s;

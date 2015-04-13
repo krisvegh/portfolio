@@ -26,13 +26,16 @@ $(document).ready(function () {
         hideMenu();
         changeMiddleImage(href.substring(1));
         showContent(href);
-        
     });
 
     $('#backButton').on('click', function(event) {
         event.preventDefault();
         showMenu();
         hideContent();
+
+    });
+
+    $('#middle').on('click', function(event) {
         breathe();
     });
 
@@ -66,14 +69,14 @@ function animateButtons(deg, sca) {
 }
 
 function hideMenu() {
-    animateButtons(125, 0.2);
+    animateButtons(180, 0.1);
     $('.navButton p').css('opacity', '0');
     $('#title').fadeOut(400);
     $('#middle, #backButton').removeClass('scaleToZero');
 }
 
 function showMenu() {
-    animateButtons(-125, 1);
+    animateButtons(-180, 1);
     $('.navButton p').css('opacity', '1');
     $('#title').fadeIn(1800);
     $('#middle, #backButton').addClass('scaleToZero');
