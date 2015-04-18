@@ -14,34 +14,46 @@ function getRotationDegrees(obj) {
     return (angle < 0) ? angle + 360 : angle;
 }
 
+function buttonsON() {
+	$('.navButton').on('click', function(event) {
+		event.preventDefault();
+		href = $(this).attr('href');
+		hideMenu();
+		changeMiddleImage(href);
+		showContent(href);
+		buttonsOFF();
+	});
+};
+
+function buttonsOFF() {
+	$('.navButton').off('click');
+	$('.navButton').on('click', function(event) {
+		event.preventDefault();
+	});
+}
+
 $(document).ready(function () {
     $("#accordion").accordion({
         collapsible: true, heightStyle: "content", active: false 
-    });
-
-
-    $('.navButton').on('click', function(event) {
-        event.preventDefault();
-        href = $(this).attr('href');
-        hideMenu();
-        changeMiddleImage(href.substring(1));
-        showContent(href);
     });
 
     $('#backButton').on('click', function(event) {
         event.preventDefault();
         showMenu();
         hideContent();
-
     });
 
-    $('#middle').on('click', function(event) {
+    $('#middle').on('mousedown', function(event) {
         breathe();
     });
 
+	$('#cvButton').on('transitionEnd webkitTransitionEnd oTransitionEnd mozTransitionEnd', function() {
+		buttonsON();
+	});
+
     animateButtons(0, 1);
     breathe();
-
+    buttonsOFF();
 });
 
 function animateButtons(deg, sca) {
@@ -73,6 +85,7 @@ function hideMenu() {
     $('.navButton p').css('opacity', '0');
     $('#title').fadeOut(400);
     $('#middle, #backButton').removeClass('scaleToZero');
+    $('#middle').addClass('shadow');
 }
 
 function showMenu() {
@@ -80,6 +93,7 @@ function showMenu() {
     $('.navButton p').css('opacity', '1');
     $('#title').fadeIn(1800);
     $('#middle, #backButton').addClass('scaleToZero');
+    $('#middle').removeClass('shadow');
 }
 
 function changeMiddleImage(href) {
@@ -87,7 +101,7 @@ function changeMiddleImage(href) {
 }
 
 function showContent(content) {
-    $(content).removeClass('scaleToZero');
+    $('#' + content).removeClass('scaleToZero');
 }
 
 function hideContent() {
@@ -96,7 +110,7 @@ function hideContent() {
 
 function breathe() {
     $('.circles').addClass('animation_breathe');
-    $('#c1').bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
+    $('#c1').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
         $('.circles').removeClass('animation_breathe');
     })
 }

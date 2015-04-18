@@ -4,11 +4,12 @@
 <html>
 <head>
     <title>Krisztian Vegh</title>
+    <meta charset="UTF-8">
     <link href="./Misc/style.css" rel="stylesheet" type="text/css"> 
 
-    <link href="./Misc/transitions.css" rel="stylesheet" type="text/css"> 
-    <link href="./Misc/animations.css" rel="stylesheet" type="text/css"> 
-    <link href="./Misc/jquery-ui.css" charset="utf-8" rel="stylesheet"/>
+    <link href="./Misc/transitions.css" rel="stylesheet" type="text/css"/> 
+    <link href="./Misc/animations.css" rel="stylesheet" type="text/css"/> 
+    <link href="./Misc/jquery-ui.css" rel="stylesheet" type="text/css"/>
     <link href="./Misc/lightbox.css" rel="stylesheet" type="text/css"/>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -21,10 +22,10 @@
 <body> 
   <!-- <img src="./images/measure.png" id="measure"> -->
     <div id="contentcarrier">
-          <div id="c1" class="circles"> <img src="./images/01.svg"> </a> </div> 
-          <div id="c2" class="circles"> <img src="./images/02.svg"> </a> </div>
-          <div id="c3" class="circles"> <img src="./images/03.svg"> </a> </div>
-          <div id="c4" class="circles"> <img src="./images/04.svg"> </a> </div>
+          <div id="c1" class="circles"> <img src="./images/01.svg" alt="circle"></div> 
+          <div id="c2" class="circles"> <img src="./images/02.svg" alt="circle"></div>
+          <div id="c3" class="circles"> <img src="./images/03.svg" alt="circle"></div>
+          <div id="c4" class="circles"> <img src="./images/04.svg" alt="circle"></div>
           <div id="middle" class="scaleToZero"></div>
           <!-- <div id="c5" class="circles"> <img src="./images/5origo.png"> </a> </div> -->
 
@@ -35,29 +36,29 @@
           	<h2>Web - Design - Print</h2>
           </div>
  
-          <a href="#home" class="navButton trans_delay_0ms" id="homeButton">
-              <img src="./images/home.svg" class="icon trans_delay_0ms">
+          <a href="home" class="navButton trans_delay_0ms" id="homeButton">
+              <img src="./images/home.svg" class="icon trans_delay_0ms" alt="homebutton">
               <p>Intro</p>
           </a>
 
-          <a href="#contact" class="navButton trans_delay_1ms" id="contactButton">
-              <img src="./images/contact.svg" class="icon trans_delay_1ms">
+          <a href="contact" class="navButton trans_delay_1ms" id="contactButton">
+              <img src="./images/contact.svg" class="icon trans_delay_1ms" alt="contactbutton">
               <p>Contact</p>
           </a>
 
-          <a href="#portfolio" class="navButton trans_delay_2ms" id="portfolioButton">
-              <img src="./images/portfolio.svg" class="icon trans_delay_2ms">
+          <a href="portfolio" class="navButton trans_delay_2ms" id="portfolioButton">
+              <img src="./images/portfolio.svg" class="icon trans_delay_2ms" alt="portfoliobutton">
               <p>Portfolio</p>
           </a>
 
-          <a href="#skills" class="navButton trans_delay_3ms" id="skillsButton">
-              <img src="./images/skills.svg" class="icon trans_delay_3ms">
+          <a href="skills" class="navButton trans_delay_3ms" id="skillsButton">
+              <img src="./images/skills.svg" class="icon trans_delay_3ms" alt="skillsbutton">
               <p>Skills</p>
           </a>
 
           <div class="navButton trans_delay_4ms" id="cvButton">
             <a href="Krisztian_Vegh_CV.pdf">
-              <img src="./images/cv.svg" class="icon trans_delay_4ms">
+              <img src="./images/cv.svg" class="icon trans_delay_4ms" alt="cvbutton">
               <p>CV</p>
             </a>
           </div>
@@ -69,17 +70,15 @@
     
 
       <div class="contentbox scaleToZero" id="home">
-      	<div id="tablecell">
-          <h2>Welcome</h2>
-          <p>You are on Krisztian Vegh's personal portfolio site.</p>
-          <p>I am an experienced artworker with more than 10 years working in a pre-press and artworking environment operating both Mac and PC computers. <br> A creative person with the determination and enthusiasm to work hard, do well and always able to work in a team environment producing high quality accurate artwork using InDesign, Photoshop, Illustrator, Acrobat or Quarkxpress.</p>
-          <p>Please feel free to contact me if you have any questions or comments.</p>
+      	<div class="tablecell">
+          <p>You are on Krisztian Vegh's personal site.</p>
+          <p>I am an experienced artworker/web developer with more than 10 years working in print and artworking environment and over 2 years in web, web-design, web-development on both Mac and PC platforms. A creative person with the determination and enthusiasm to work hard, do well, producing high quality marketing pieces for corporate or consumer audiences.</p>
+          <p>If you feel I would make a good addition <br>to your team, get in touch.</p>
         </div>
       </div>
 
       <div class="contentbox scaleToZero" id="contact">
-      	<div id="tablecell">
-          <h2>Contact</h2>
+      	<div class="tablecell">
             <p><b>Address</b><br>
               140 Castlecombe Drive<br>
               London<br>

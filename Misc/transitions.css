@@ -51,5 +51,11 @@
     -ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
     -o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
     transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+
+    box-shadow: inset 0px 0px 0px #C0C0C0;
+}
+
+.shadow {
+    box-shadow: inset 3px 3px 5px #C0C0C0 !important;
 }
 
