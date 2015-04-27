@@ -1,3 +1,27 @@
+$(document).ready(function () {
+    $("#accordion").accordion({
+        collapsible: true, heightStyle: "content", active: false 
+    });
+
+    $('#backButton').on('click', function(event) {
+        event.preventDefault();
+        showMenu();
+        hideContent();
+    });
+
+    $('#middle').on('mousedown', function(event) {
+        breathe();
+    });
+
+    $('#cvButton').on('transitionEnd webkitTransitionEnd oTransitionEnd mozTransitionEnd', function() {
+        buttonsON();
+    });
+
+    animateButtons(0, 1);
+    breathe();
+    buttonsOFF();
+});
+
 //get "transform: rotate" value
 function getRotationDegrees(obj) {
     var matrix = obj.css("-webkit-transform") ||
@@ -31,30 +55,6 @@ function buttonsOFF() {
 		event.preventDefault();
 	});
 }
-
-$(document).ready(function () {
-    $("#accordion").accordion({
-        collapsible: true, heightStyle: "content", active: false 
-    });
-
-    $('#backButton').on('click', function(event) {
-        event.preventDefault();
-        showMenu();
-        hideContent();
-    });
-
-    $('#middle').on('mousedown', function(event) {
-        breathe();
-    });
-
-	$('#cvButton').on('transitionEnd webkitTransitionEnd oTransitionEnd mozTransitionEnd', function() {
-		buttonsON();
-	});
-
-    animateButtons(0, 1);
-    breathe();
-    buttonsOFF();
-});
 
 function animateButtons(deg, sca) {
     $('.navButton').each(function() {
@@ -114,6 +114,92 @@ function breathe() {
         $('.circles').removeClass('animation_breathe');
     })
 }
+
+
+//----------DONUTS-----------//
+
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+ 
+    if (!window.requestAnimationFrame)
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+        };
+ 
+    if (!window.cancelAnimationFrame)
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+}());
+
+// requestAnimationFrame Shim
+(function() {
+  var requestAnimationFrame =   window.requestAnimationFrame || 
+                                window.mozRequestAnimationFrame ||
+                                window.webkitRequestAnimationFrame || 
+                                window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+
+
+Math.easeInOutQuint = function (t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t*t*t*t + b;
+    t -= 2;
+    return c/2*(t*t*t*t*t + 2) + b;
+};
+
+Math.easeOutQuint = function (t, b, c, d) {
+    t /= d;
+    t--;
+    return c*(t*t*t*t*t + 1) + b;
+};
+
+// $(document).ready(function() {
+
+//     var canvas = document.getElementById('myCanvas');
+//     var context = canvas.getContext('2d');
+//     var x = canvas.width / 2;
+//     var y = canvas.height / 2;
+//     var radius = 75;
+//     var duration = 90; //frames
+//     var percent = 80;
+//     var curFrame = 0;
+//     var circ = Math.PI * 2;
+//     var quart = Math.PI / 2;
+
+//     context.lineWidth = 10;
+//     context.strokeStyle = '#ad2323';
+
+//     function animate(currentFrame) {
+//         context.clearRect(0, 0, canvas.width, canvas.height);
+//         context.beginPath();
+//         context.arc(x, y, radius, - (quart), Math.easeOutQuint(currentFrame, -quart, circ/100*percent, duration), false);
+//         context.stroke();
+//         var nextFrame = curFrame++;
+//         console.log(currentFrame / 100);
+
+//         if (curFrame <= duration) {
+//             requestAnimationFrame(function () {
+//                 animate(nextFrame)
+//             });
+//         }
+//     }
+
+//     animate();
+// });
+
 
 
 //Google Analytics

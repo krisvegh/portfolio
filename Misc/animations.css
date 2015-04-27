@@ -135,3 +135,44 @@
 	    transform: scale(1); 
 	}
 }
+
+.anim_delay_0ms {
+    -we§bkit-animation-delay: 0.0s;
+    -moz-animation-delay: 0.0s;
+    -ms-animation-delay: 0.0s;
+    -o-animation-delay: 0.0s;
+    animation-delay: 0.0s;	
+}
+
+
+.anim_delay_1ms {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    -ms-animation-delay: 0.1s;
+    -o-animation-delay: 0.1s;
+    animation-delay: 0.1s;	
+}
+
+.anim_delay_2ms {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+    -o-animation-delay: 0.12;
+    animation-delay: 0.2s;	
+}
+
+.anim_delay_3ms {
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-delay: 0.13;
+    animation-delay: 0.3s;	
+}
+
+.anim_delay_4ms {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.14;
+    animation-delay: 0.4s;	
+}

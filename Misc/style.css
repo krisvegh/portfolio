@@ -14,34 +14,16 @@ body {
 #c1 {
     top: -248px;
     left: -427px;
-
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-delay: 0.5s;
-    -ms-animation-delay: 0.5s;
-    -o-animation-delay: 0.5s;
-    animation-delay: 0.5s;
 }
 
 #c2 {
     top: 125px;
     left: -52px;
-
-    -webkit-animation-delay: 0.4s;
-    -moz-animation-delay: 0.4s;
-    -ms-animation-delay: 0.4s;
-    -o-animation-delay: 0.4s;
-    animation-delay: 0.4s;    
 }
 
 #c3 {
     top: 193px;
     left: 15px;
-
-    -webkit-animation-delay: 0.3s;
-    -moz-animation-delay: 0.3s;
-    -ms-animation-delay: 0.3s;
-    -o-animation-delay: 0.3s;
-    animation-delay: 0.3s;
 }
 
 #c4 {
@@ -53,17 +35,6 @@ body {
     -ms-animation-delay: 0.2s;
     -o-animation-delay: 0.2s;
     animation-delay: 0.2s;
-}
-
-#c5 {
-    top: 401px;
-    left: 220px;
-
-    -webkit-animation-delay: 0.1s;
-    -moz-animation-delay: 0.1s;
-    -ms-animation-delay: 0.1s;
-    -o-animation-delay: 0.1s;
-    animation-delay: 0.1s;
 }
 
 #middle {
@@ -379,3 +350,72 @@ a:visited, a:link{
     top: 1px;
     z-index: 2;
 }
+
+#skillsbox {
+    width: 200px;
+    left: 545px;
+    top: 150px;
+    position: absolute;
+    display: inline-block;
+}
+
+.skillItems {
+    width: 60px;
+    height: 60px;
+    background-color: #f1f1f1;
+    border-radius: 40px;
+    position: relative;
+    display: inline-block;
+    margin: 10px 8px;
+}
+
+#skill_ps {
+    background: url(../images/skill_ps.png) center center no-repeat #f1f1f1;
+    background-size: contain;
+}
+
+#skill_indd {
+
+}
+
+#skill_ai {
+
+}
+
+#skill_html {
+
+}
+
+#skill_css {
+
+}
+
+#skill_js {
+
+}
+
+#skill_php {
+
+}
+
+#skill_mysql {
+
+}
+
+#skill_sass {
+
+}
+
+#skill_fcp {
+
+}
+
+
+
+
+
+
+
+
+
+
