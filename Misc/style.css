@@ -375,39 +375,48 @@ a:visited, a:link{
 }
 
 #skill_indd {
-
+    background: url(../images/skill_indd.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_ai {
-
+    background: url(../images/skill_ai.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_html {
-
+    background: url(../images/skill_html.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_css {
-
+    background: url(../images/skill_css.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_js {
-
+    background: url(../images/skill_js.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_php {
-
+    background: url(../images/skill_php.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_mysql {
-
+    background: url(../images/skill_mysql.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_sass {
-
+    background: url(../images/skill_sass.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 #skill_fcp {
-
+    background: url(../images/skill_fcp.png) center center no-repeat #f1f1f1;
+    background-size: contain;
 }
 
 
