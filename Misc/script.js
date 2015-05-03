@@ -1,12 +1,71 @@
+var Donut = {};
+var levels = {
+    ps: 95,
+    indd: 99,
+    ai: 65,
+    html: 90,
+    css: 95,
+    js: 85,
+    php: 70,
+    mysql: 55,
+    sass: 55,
+    fcp: 60
+}
+
+Math.easeInOutQuint = function (t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t*t*t*t + b;
+    t -= 2;
+    return c/2*(t*t*t*t*t + 2) + b;
+};
+
+Math.easeOutQuint = function (t, b, c, d) {
+    t /= d;
+    t--;
+    return c*(t*t*t*t*t + 1) + b;
+};
+
+function donut(donutID, percentage) {
+    Donut.canvas = document.getElementById(donutID);
+    console.log(Donut.canvas);
+    Donut.context = Donut.canvas.getContext('2d');
+
+    Donut.x = 30;
+    Donut.y = 30;
+    Donut.radius = 20;
+    Donut.duration = 90; //frames
+    Donut.percent = percentage;
+    Donut.curFrame = 0;
+    Donut.circ = Math.PI * 2;
+    Donut.quart = Math.PI / 2;
+
+    Donut.context.lineWidth = 3;
+    Donut.context.strokeStyle = '9D9D9D';
+
+    drawDonut();
+};
+
+function drawDonut(currentFrame) {
+    Donut.context.clearRect(0, 0, Donut.canvas.width, Donut.canvas.height);
+    Donut.context.beginPath();
+    Donut.context.arc(Donut.x, Donut.y, Donut.radius, - (Donut.quart), Math.easeOutQuint(currentFrame, -Donut.quart, Donut.circ/100*Donut.percent, Donut.duration), false);
+    Donut.context.stroke();
+    var nextFrame = Donut.curFrame++;
+    // console.log(currentFrame / 100);
+
+    if (Donut.curFrame < Donut.duration) {
+        requestAnimationFrame(function () {
+            drawDonut(nextFrame)
+        });
+    }
+}
+
+
 $(document).ready(function () {
+
+    buttonsOFF();    
     $("#accordion").accordion({
         collapsible: true, heightStyle: "content", active: false 
-    });
-
-    $('#backButton').on('click', function(event) {
-        event.preventDefault();
-        showMenu();
-        hideContent();
     });
 
     $('#middle').on('mousedown', function(event) {
@@ -17,9 +76,16 @@ $(document).ready(function () {
         buttonsON();
     });
 
+    $('.skillItems').on('transitionEnd webkitTransitionEnd oTransitionEnd mozTransitionEnd', function(i) {
+        ez = i.currentTarget.id;
+        donut("canvas_" + ez, 50);
+        // donut(ez, levels[ez]);
+
+    });
+
     animateButtons(0, 1);
     breathe();
-    buttonsOFF();
+
 });
 
 //get "transform: rotate" value
@@ -47,6 +113,16 @@ function buttonsON() {
 		showContent(href);
 		buttonsOFF();
 	});
+    $('#skillsButton').on('click', function(event) {
+        showSkills();
+    });
+
+    $('#backButton').on('click', function(event) {
+        event.preventDefault();
+        showMenu();
+        hideContent();
+        buttonsOFF();
+    });
 };
 
 function buttonsOFF() {
@@ -54,6 +130,7 @@ function buttonsOFF() {
 	$('.navButton').on('click', function(event) {
 		event.preventDefault();
 	});
+    $('#backButton').off('click');
 }
 
 function animateButtons(deg, sca) {
@@ -92,8 +169,10 @@ function showMenu() {
     animateButtons(-180, 1);
     $('.navButton p').css('opacity', '1');
     $('#title').fadeIn(1800);
-    $('#middle, #backButton').addClass('scaleToZero');
+    $('#middle, #backButton, .skillItems').addClass('scaleToZero');
     $('#middle').removeClass('shadow');
+    $('#c2').removeClass('scaleTo0_8');
+    $('#c1').removeClass('scaleTo1_2');
 }
 
 function changeMiddleImage(href) {
@@ -115,8 +194,21 @@ function breathe() {
     })
 }
 
+function showSkills() {
+    $('.skillItems').each(function(i) {
+        var ez = $(this);
+        setTimeout(function() {
+            ez.removeClass('scaleToZero');
+        }, i*100);
+    });
+
+    $('#c2').addClass('scaleTo0_8');
+    $('#c1').addClass('scaleTo1_2');
+}
+
 
 //----------DONUTS-----------//
+
 
 (function() {
     var lastTime = 0;
@@ -151,55 +243,6 @@ function breathe() {
                                 window.msRequestAnimationFrame;
   window.requestAnimationFrame = requestAnimationFrame;
 })();
-
-
-Math.easeInOutQuint = function (t, b, c, d) {
-    t /= d/2;
-    if (t < 1) return c/2*t*t*t*t*t + b;
-    t -= 2;
-    return c/2*(t*t*t*t*t + 2) + b;
-};
-
-Math.easeOutQuint = function (t, b, c, d) {
-    t /= d;
-    t--;
-    return c*(t*t*t*t*t + 1) + b;
-};
-
-// $(document).ready(function() {
-
-//     var canvas = document.getElementById('myCanvas');
-//     var context = canvas.getContext('2d');
-//     var x = canvas.width / 2;
-//     var y = canvas.height / 2;
-//     var radius = 75;
-//     var duration = 90; //frames
-//     var percent = 80;
-//     var curFrame = 0;
-//     var circ = Math.PI * 2;
-//     var quart = Math.PI / 2;
-
-//     context.lineWidth = 10;
-//     context.strokeStyle = '#ad2323';
-
-//     function animate(currentFrame) {
-//         context.clearRect(0, 0, canvas.width, canvas.height);
-//         context.beginPath();
-//         context.arc(x, y, radius, - (quart), Math.easeOutQuint(currentFrame, -quart, circ/100*percent, duration), false);
-//         context.stroke();
-//         var nextFrame = curFrame++;
-//         console.log(currentFrame / 100);
-
-//         if (curFrame <= duration) {
-//             requestAnimationFrame(function () {
-//                 animate(nextFrame)
-//             });
-//         }
-//     }
-
-//     animate();
-// });
-
 
 
 //Google Analytics

@@ -3,12 +3,19 @@
 body {
     background-color: white;
     overflow: hidden;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
 
-
+p, h1, h2 {
+    -webkit-font-smoothing: antialiased;
 }
 
 .circles {
     position: absolute;
+    pointer-events: none;
 }
 
 #c1 {
@@ -100,8 +107,6 @@ a:visited, a:link{
 #cv a:link {
     color: black;
 }
-
-
 
 .icon {
     width: 40px; 
@@ -351,71 +356,116 @@ a:visited, a:link{
     z-index: 2;
 }
 
-#skillsbox {
-    width: 200px;
-    left: 545px;
+#skills {
+    width: 360px;
+    left: 495px;
     top: 150px;
     position: absolute;
     display: inline-block;
+    pointer-events:none;
+}
+
+canvas {
+    position: absolute;
 }
 
 .skillItems {
-    width: 60px;
+    width: 160px;
     height: 60px;
     background-color: #f1f1f1;
-    border-radius: 40px;
+    border-radius: 0px;
     position: relative;
     display: inline-block;
-    margin: 10px 8px;
+    margin: 8px;
+    border-radius: 35px 0px 0px 35px;
+
+    -webkit-transition: -webkit-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    -moz-transition: -moz-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    -ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
+    -o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+    transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
 }
 
-#skill_ps {
-    background: url(../images/skill_ps.png) center center no-repeat #f1f1f1;
+.skillItems p {
+    font-family: Dosis, sans-serif;
+    position: relative;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.skillIcons {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    float: left;
+    border-radius: 20px;
+}
+
+.skillInfo {
+    display: inline-block;
+    height: 60px;
+    width: 105px;
+    float: left;
+}
+
+.skillTitle {
+    margin: 13px 0px 0px 13px; 
+    text-decoration: underline;
+}
+
+.skillLevel {
+    margin: 0px 0px 0px 13px;
+}
+
+#icon_ps {
+    background: url(../images/skill_ps.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_indd {
-    background: url(../images/skill_indd.png) center center no-repeat #f1f1f1;
+#icon_indd {
+    background: url(../images/skill_indd.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_ai {
-    background: url(../images/skill_ai.png) center center no-repeat #f1f1f1;
+#icon_ai {
+    background: url(../images/skill_ai.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_html {
-    background: url(../images/skill_html.png) center center no-repeat #f1f1f1;
+#icon_html {
+    background: url(../images/skill_html.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_css {
-    background: url(../images/skill_css.png) center center no-repeat #f1f1f1;
+#icon_css {
+    background: url(../images/skill_css.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_js {
-    background: url(../images/skill_js.png) center center no-repeat #f1f1f1;
+#icon_js {
+    background: url(../images/skill_js.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_php {
-    background: url(../images/skill_php.png) center center no-repeat #f1f1f1;
+#icon_php {
+    background: url(../images/skill_php.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_mysql {
-    background: url(../images/skill_mysql.png) center center no-repeat #f1f1f1;
+#icon_mysql {
+    background: url(../images/skill_mysql.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_sass {
-    background: url(../images/skill_sass.png) center center no-repeat #f1f1f1;
+#icon_sass {
+    background: url(../images/skill_sass.png) center center no-repeat white;
     background-size: contain;
 }
 
-#skill_fcp {
-    background: url(../images/skill_fcp.png) center center no-repeat #f1f1f1;
+#icon_fcp {
+    background: url(../images/skill_fcp.png) center center no-repeat white;
     background-size: contain;
 }
 
