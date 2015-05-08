@@ -22,8 +22,12 @@ var skills = (function() {
 
 	pub.donutObject = function(donutID, percentage) {
 		this.canvas = document.getElementById(donutID);
-		this.context = this.canvas.getContext('2d');
+		this.canvas.width = 120;
+		this.canvas.height = 120;
+		this.canvas.style.width = "60px";
+		this.canvas.style.height = "60px";
 
+		this.context = this.canvas.getContext('2d');
 		this.x = 30;
 		this.y = 30;
 		this.radius = 20;
@@ -35,6 +39,8 @@ var skills = (function() {
 
 		this.context.lineWidth = 3;
 		this.context.strokeStyle = '#808080';
+
+		this.context.scale(2,2);
 
 		var that = this;
 
