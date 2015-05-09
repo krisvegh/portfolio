@@ -40,6 +40,7 @@ function buttonsON() {
 		href = $(this).attr('href');
 		hideMenu();
 		changeMiddleImage(href);
+        showPageTitle(href);
 		showContent(href);
 		buttonsOFF();
 	});
@@ -52,7 +53,10 @@ function buttonsON() {
         showMenu();
         hideContent();
         buttonsOFF();
+        hidePageTitle();
     });
+
+    $('#cvButton').off('click');
 };
 
 function buttonsOFF() {
@@ -61,6 +65,7 @@ function buttonsOFF() {
 		event.preventDefault();
 	});
     $('#backButton').off('click');
+    $('#cvButton').off('click');
 }
 
 function animateButtons(deg, sca) {
@@ -117,6 +122,14 @@ function hideContent() {
     $('.contentbox').addClass('scaleToZero');
 }
 
+function showPageTitle(href) {
+    $("#title_" + href).addClass('showpagetitle');
+}
+
+function hidePageTitle() {
+    $('.pagetitle').removeClass('showpagetitle');
+}
+
 function breathe() {
     $('.circles').addClass('animation_breathe');
     $('#c1').on('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
@@ -130,7 +143,7 @@ function showSkills() {
         var ez = $(this);
         setTimeout(function() {
             ez.removeClass('scaleToZero');
-        }, i*100);
+        }, i*50);
     });
 
     $('#c2').addClass('scaleTo0_8');

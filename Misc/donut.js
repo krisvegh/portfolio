@@ -1,10 +1,10 @@
 var levels = {
 	ps: 95,
-	indd: 100,
+	indd: 99,
 	ai: 65,
-	html: 90,
-	css: 95,
-	js: 85,
+	html: 85,
+	css: 90,
+	js: 79,
 	php: 70,
 	mysql: 55,
 	sass: 40,
@@ -38,7 +38,7 @@ var skills = (function() {
 		this.quart = Math.PI / 2;
 
 		this.context.lineWidth = 3;
-		this.context.strokeStyle = '#808080';
+		this.context.strokeStyle = '#676767';
 
 		this.context.scale(2,2);
 
@@ -78,7 +78,7 @@ var skills = (function() {
 
 	function skillLevel(value) {
 		if (value <= 40) {return "Experienced"};
-		if (value > 40 && value < 80) {return "Intermediate"};
+		if (value > 40 && value < 80) {return "Advanced"};
 		if (value >= 80) {return "Expert"};
 	}
 
