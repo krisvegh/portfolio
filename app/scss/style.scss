@@ -1,0 +1,518 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,700|Poiret+One);
+@import '_normalize.scss';
+@import '_animations.scss';
+@import '_transitions.scss';
+
+
+html {
+	
+}
+
+body {
+	background-color: white;
+	overflow: hidden;
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+
+	height: 0;
+}
+
+p, h1, h2 {
+	-webkit-font-smoothing: antialiased;
+}
+
+.circles {
+	position: absolute;
+	pointer-events: none;
+}
+
+#c1 {
+	top: -248px;
+	left: -427px;
+}
+
+#c2 {
+	top: 125px;
+	left: -52px;
+}
+
+#c3 {
+	top: 193px;
+	left: 15px;
+}
+
+#c4 {
+	top: 296px;
+	left: 118px;
+
+	-webkit-animation-delay: 0.2s;
+	-moz-animation-delay: 0.2s;
+	-ms-animation-delay: 0.2s;
+	-o-animation-delay: 0.2s;
+	animation-delay: 0.2s;
+}
+
+#middle {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: #f1f1f1;
+	left: 192px;
+	top: 370px;
+	/*background-image: url(../images/home.svg);*/
+	background-size: 60%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 2;
+	/*box-shadow: inset 0px 0px 0px #C0C0C0;*/
+
+	-webkit-transition: -webkit-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.8s, box-shadow .15s ease 1.5s;
+	-moz-transition: -moz-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.8s, box-shadow .15s ease 1.5s;
+	-ms-transition: -ms-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.8s, box-shadow .15s ease 1.5s; /* IE10 is actually unprefixed */
+	-o-transition: -o-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.8s, box-shadow .15s ease 1.5s;
+	transition: transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.8s, box-shadow .15s ease 1.5s;
+}
+
+
+#contentcarrier {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1024px;
+	height: 750px;
+}
+
+
+#title {
+	font-family: 'Poiret One', sans-serif;
+	width: 548px;
+	height: 119px;
+	position: absolute;
+	top: 348px;
+	left: 150px;
+}
+
+h1 {
+	font-size: 57px;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-size: 20px;
+	margin-top: 0px;
+}
+
+a:visited, a:link{
+	color: black;
+	text-decoration: none;
+}
+
+#cv a:visited {
+	color: black;
+}
+
+#cv a:link {
+	color: black;
+}
+
+.icon {
+	width: 40px; 
+	height: 33px; 
+	top: 10px; 
+	left: 6px;
+	position: relative; 
+
+	-webkit-transition: -webkit-transform 2s cubic-bezier(.17, .67, .17, 1);
+	-moz-transition: -moz-transform 2s cubic-bezier(.17, .67, .17, 1);
+	-ms-transition: -ms-transform 2s cubic-bezier(.17, .67, .17, 1); /* IE10 is actually unprefixed */
+	-o-transition: -o-transform 2s cubic-bezier(.17, .67, .17, 1);
+	transition: transform 2s cubic-bezier(.17, .67, .17, 1);
+}
+
+.navButton {
+	margin: 0px auto;
+	font-family: "Dosis", sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	letter-spacing: 1.4px;
+	position: absolute;
+	cursor: pointer;
+	width: 52px;
+	height: 52px;
+	background-color: #f1f1f1;
+	border-radius: 26px;
+	text-decoration: none;
+	opacity: 1;
+
+	-webkit-transition: -webkit-transform 2s cubic-bezier(.17, .67, .17, 1), opacity 0.5s;
+	-moz-transition: -moz-transform 2s cubic-bezier(.17, .67, .17, 1), opacity 0.5s;
+	-ms-transition: -ms-transform 2s cubic-bezier(.17, .67, .17, 1), opacity 0.5s; /* IE10 is actually unprefixed */
+	-o-transition: -o-transform 2s cubic-bezier(.17, .67, .17, 1), opacity 0.5s;
+	transition: transform 2s cubic-bezier(.17, .67, .17, 1), opacity 0.5s;
+
+	-webkit-transform-origin: 65px 358px; 
+	-moz-transform-origin: 65px 358px; 
+	-ms-transform-origin: 65px 358px; 
+	-o-transform-origin: 65px 358px; 
+	transform-origin: 65px 358px; 
+}
+
+#backButton {
+	top: 600px;
+	left: 480px;
+
+	margin: 0px auto;
+	font-family: "Dosis", sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	letter-spacing: 1.4px;
+	position: absolute;
+	cursor: pointer;
+	width: 52px;
+	height: 52px;
+	background-color: #f1f1f1;
+	border-radius: 26px;
+	text-decoration: none;
+
+	-webkit-transition: -webkit-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
+	-moz-transition: -moz-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
+	-ms-transition: -ms-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s; /* IE10 is actually unprefixed */
+	-o-transition: -o-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
+	transition: transform .5s cubic-bezier(.09, .81, .31, 1.23) 0.7s;
+}
+
+.pagetitle {
+	font-family: 'Poiret One', sans-serif;  font-size: 90px;
+	position: absolute;
+	left: 330px;
+	z-index: 1;
+	color: rgb(226, 226, 226);
+	top: -30px;
+	opacity: 0;
+	pointer-events: none;
+
+	-webkit-transition: -webkit-transform 4s cubic-bezier(.17, .67, .17, 1), opacity 2s;
+	-moz-transition: -moz-transform 4s cubic-bezier(.17, .67, .17, 1), opacity 2s;
+	-ms-transition: -ms-transform 4s cubic-bezier(.17, .67, .17, 1), opacity 2s; /* IE10 is actually unprefixed */
+	-o-transition: -o-transform 4s cubic-bezier(.17, .67, .17, 1), opacity 2s;
+	transition: transform 4s cubic-bezier(.17, .67, .17, 1), opacity 2s;
+}
+
+.showpagetitle {
+	opacity: 100;
+	-webkit-transform: translate(80px);
+	-moz-transform: translate(80px);
+	-ms-transform: translate(80px);
+	-o-transform: translate(80px);
+	transform: translate(80px);
+}
+
+#backButton img {
+	width: 40px; 
+	height: 33px; 
+	top: 10px; 
+	left: 6px;
+	position: relative; 
+}
+
+.navButton p, #backButton p {
+	position:absolute;
+	font-size:13px;
+	top: 3px;
+	left: 52px;
+	text-indent:10px;
+
+	-webkit-transform-origin: -28px 10px;
+	-moz-transform-origin: -28px 10px;
+	-ms-transform-origin: -28px 10px;
+	-o-transform-origin: -28px 10px;
+	transform-origin: -28px 10px;
+
+	-webkit-transition: -webkit-transform 1s ease-out, opacity 2s ease 1s;
+	-moz-transition: -moz-transform 1s ease-out, opacity 2s ease 1s;
+	-ms-transition: -ms-transform 1s ease-out, opacity 2s ease 1s;
+	-o-transition: -o-transform 1s ease-out, opacity 2s ease 1s;
+	transition: transform 1s ease-out, opacity 2s ease 1s;
+}
+
+#homeButton {
+	top: 62px;
+	left: 175px; 
+
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	transform: rotate(1deg);
+}
+
+#homeButton p, #homeButton img {
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+}
+
+#contactButton {
+	top: 62px;
+	left: 175px;
+
+	-webkit-transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+
+#contactButton p, #contactButton img {
+	-webkit-transform: rotate(-30deg);
+	-moz-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+
+#portfolioButton {
+	top: 62px;
+	left: 175px;
+
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	-ms-transform: rotate(60deg);
+	-o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+#portfolioButton p, #portfolioButton img {
+	-webkit-transform: rotate(-60deg);
+	-moz-transform: rotate(-60deg);
+	-ms-transform: rotate(-60deg);
+	-o-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+
+#skillsButton {
+	top: 62px;
+	left: 175px;
+
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+#skillsButton p, #skillsButton img {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+#cvButton {
+	top: 62px;
+	left: 175px;
+
+	-webkit-transform: rotate(120deg);
+	-moz-transform: rotate(120deg);
+	-ms-transform: rotate(120deg);
+	-o-transform: rotate(120deg);
+	transform: rotate(120deg);
+}
+
+#cvButton p, #cvButton img {
+	-webkit-transform: rotate(-120deg);
+	-moz-transform: rotate(-120deg);
+	-ms-transform: rotate(-120deg);
+	-o-transform: rotate(-120deg);
+	transform: rotate(-120deg);
+}
+
+.contentbox {
+	position: absolute;
+	padding: 0px;
+	left: 500px;
+	width: 300px;
+	height: 300px;
+	border-radius: 150px;
+	top: 190px;
+	font-family: "Dosis", sans-serif;
+	font-size: 13px;
+	text-align: center;
+	color: #000000;
+	background-color: rgba(20, 20, 20, 0.05);
+	display: table;
+
+	-webkit-transition: -webkit-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+	-moz-transition: -moz-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+	-ms-transition: -ms-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s; /* IE10 is actually unprefixed */
+	-o-transition: -o-transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+	transition: transform .6s cubic-bezier(.09, .81, .31, 1.23) 0.5s;
+
+	-webkit-transform-origin: -280px 230px; 
+	-moz-transform-origin: -280px 230px; 
+	-ms-transform-origin: -280px 230px; 
+	-o-transform-origin: -280px 230px; 
+	transform-origin: -280px 230px; 
+}
+
+.contentbox .tablecell {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+:target {
+	display: block;
+}
+
+.imgLinks 
+{
+	display: none;
+}
+
+#portfolio {
+	background: none;
+	top: 250px;
+	position: relative;
+}
+
+#accordion {
+	height: 235px !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#measure {
+	position: absolute;
+	left: -68px;
+	top: 1px;
+	z-index: 2;
+}
+
+#skills {
+	width: 360px;
+	left: 482px;
+	top: 180px;
+	position: absolute;
+	display: inline-block;
+	pointer-events:none;
+}
+
+canvas {
+	position: absolute;
+}
+
+.skillItems {
+	width: 160px;
+	height: 60px;
+	background-color: #f1f1f1;
+	border-radius: 0px;
+	position: relative;
+	display: inline-block;
+	margin: 8px;
+	border-radius: 35px 0px 0px 35px;
+
+	-webkit-transition: -webkit-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+	-moz-transition: -moz-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+	-ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
+	-o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+	transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+}
+
+.skillItems p {
+	font-family: Dosis, sans-serif;
+	position: relative;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.skillIcons {
+	width: 40px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 10px;
+	display: inline-block;
+	float: left;
+	border-radius: 20px;
+}
+
+.skillInfo {
+	display: inline-block;
+	height: 60px;
+	width: 105px;
+	float: left;
+}
+
+.skillTitle {
+	margin: 13px 0px 0px 13px; 
+	text-decoration: underline;
+}
+
+.skillLevel {
+	margin: 0px 0px 0px 13px;
+}
+
+#icon_ps {
+	background: url(../images/skill_ps.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_indd {
+	background: url(../images/skill_indd.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_ai {
+	background: url(../images/skill_ai.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_html {
+	background: url(../images/skill_html.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_css {
+	background: url(../images/skill_css.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_js {
+	background: url(../images/skill_js.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_php {
+	background: url(../images/skill_php.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_mysql {
+	background: url(../images/skill_mysql.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_sass {
+	background: url(../images/skill_sass.png) center center no-repeat white;
+	background-size: contain;
+}
+
+#icon_fcp {
+	background: url(../images/skill_fcp.png) center center no-repeat white;
+	background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+
