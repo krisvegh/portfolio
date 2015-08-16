@@ -14,19 +14,22 @@ var gulp = require('gulp'),
 ;
 
 var paths = {
-	js: ['app/js/script.js', 'app/js/donut.js'],
+	js: ['bower_components/angular/angular.min.js',
+		'bower_components/angular-route/angular-route.min.js', 
+		'app/js/app.js', 
+		'app/js/donut.js'
+		],
 	css: 'app/scss/style.scss',
 	images: 'app/images/**',
 	html: 'app/*.html'
-}
+};
 
 var destination = {
 	js: 'dist/js',
 	css: 'dist/css',
 	images: 'dist/images',
-	html: 'dist/',
-	NAS: '/Volumes/web/krisvegh'
-}
+	html: 'dist/'
+};
 
 var options = {
 	autoprefix: 'last 10 version',
@@ -35,16 +38,15 @@ var options = {
 	jshint: '',
 	jshint_reporter: 'default',
 	open: {app: 'Google Chrome'}
-}
+};
 
-/* */ 
 gulp.task('js', function() {
 	gulp.src(paths.js)
 	.pipe(plumber())
 	.pipe(jshint(options.jshint))
 	.pipe(jshint.reporter( options.jshint_reporter))
-	.pipe(uglify())
-	.pipe(concat('script.js'))
+	//.pipe(uglify())
+	//.pipe(concat('script.js'))
 	.pipe(gulp.dest(destination.js))
 	.pipe(livereload());
 	});
@@ -91,11 +93,6 @@ gulp.task('watch', function() {
 	gulp.watch(paths.css, ['css']);
 	gulp.watch(paths.images, ['images']);
 	gulp.watch(paths.html, ['html']);
-	});
-
-gulp.task('deploy-to-nas', function() {
-	gulp.src('dist/**')
-	.pipe(gulp.dest(destination.NAS))
 	});
 
 gulp.task('default', ['js', 'css', 'images', 'html', 'open', 'watch']);

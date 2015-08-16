@@ -1,0 +1,21 @@
+{
+  "name": "krisvegh-angular",
+  "version": "0.0.0",
+  "authors": [
+    "Kris <wood1y01@gmail.com>"
+  ],
+  "description": "Portfolio with angular",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4"
+  }
+}
