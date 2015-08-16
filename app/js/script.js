@@ -55,6 +55,7 @@ function buttonsON() {
         hideContent();
         buttonsOFF();
         hidePageTitle();
+        $('#skills').addClass('scaleToZero');
     });
 
     $('#cvButton').off('click');
@@ -145,7 +146,7 @@ function showSkills() {
         var ez = $(this);
         setTimeout(function() {
             ez.removeClass('scaleToZero');
-        }, i*50);
+        }, i*200);
     });
 
     $('#c2').addClass('scaleTo0_8');
