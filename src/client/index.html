@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome = 1" />
+    <title>Krisztian Vegh</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" name="viewport">
+
+    <!-- build:css styles/lib.css -->    
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/app.css-->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/.tmp/style.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+   
+</head>
+
+<body>
+    <div class="circles anim_delay_3ms transitioned" id="c1"><img alt="circle" src="./images/01.svg"></div>
+    <div class="circles anim_delay_2ms transitioned" id="c2"><img alt="circle" src="./images/02.svg"></div>
+    <div class="circles anim_delay_1ms transitioned" id="c3"><img alt="circle" src="./images/03.svg"></div>
+    <div class="circles anim_delay_0ms transitioned" id="c4"><img alt="circle" src="./images/04.svg"></div>
+    <div class="scaleToZero" id="middle"></div>
+    <div id="title">
+        <h1>Krisztian Vegh</h1>
+        <h2>Web - Design - Print</h2>
+    </div>
+
+    <p class="pagetitle" id="title_home">Introduction</p>
+    <p class="pagetitle" id="title_contact">Contact</p>
+    <p class="pagetitle" id="title_portfolio">Portfolio</p>
+    <p class="pagetitle" id="title_skills">Skills</p>
+    <p class="pagetitle" id="title_cv">CV</p>
+
+    <a href="#/introduction" class="navButton trans_delay_0ms" id="homeButton">
+        <img alt="homebutton" class="icon trans_delay_0ms" src="./images/home.svg">
+        <p>Intro</p>
+    </a>
+    <a class="navButton trans_delay_1ms" href="contact" id="contactButton">
+        <img alt="contactbutton" class= "icon trans_delay_1ms" src="./images/contact.svg">
+        <p>Contact</p>
+    </a>
+    <a class="navButton trans_delay_2ms" href="portfolio" id="portfolioButton">
+        <img alt="portfoliobutton" class=   "icon trans_delay_2ms" src="./images/portfolio.svg">
+        <p>Portfolio</p>
+    </a>
+    <a class="navButton trans_delay_3ms" href="skills" id="skillsButton">
+        <img alt="skillsbutton" class= "icon trans_delay_3ms" src="./images/skills.svg">
+        <p>Skills</p>
+    </a>
+    <div class="navButton trans_delay_4ms" id="cvButton">
+        <a href="Krisztian_Vegh_CV.pdf"><img alt="cvbutton" class="icon trans_delay_4ms" src="./images/cv.svg">
+            <p>CV</p>
+        </a>
+    </div>
+
+    <div class="scaleToZero" id="backButton">
+        <img src="./images/back.svg" alt="">
+        <p>Back</p>
+    </div>
+
+    <ng-view></ng-view>
+
+    <!-- build:js js/lib.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js js/app.js-->
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <!-- inject: templates:js -->
+    <!-- endbuild -->
+</body>
+</html>
