@@ -1,3 +1,7 @@
+# Ignore TEMP folder #
+###################
+.tmp
+
 # Ignore Visual Studio  Project #
 ###################
 *.user
