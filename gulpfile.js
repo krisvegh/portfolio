@@ -6,6 +6,8 @@ var $ = require('gulp-load-plugins')({lazy:true});
 var browsersync = require('browser-sync');
 var port = process.env.PORT || config.defaultPort;
 
+var sourcemaps = require('gulp-sourcemaps'); //This doesn't work with load plugins for some reason
+
 gulp.task('help', $.taskListing);
 gulp.task('default', ['help']);
 
@@ -21,11 +23,9 @@ gulp.task('vet', function() {
 });
 
 gulp.task('styles', ['clean-styles'], function() {
-    return gulp
-        .src(config.sass)
-        .pipe($.plumber())
-        .pipe($.sass())
+    return $.rubySass(config.sass, {sourcemap: true})
         .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']}))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.temp));
 });
 
@@ -43,10 +43,6 @@ gulp.task('images', ['clean-images'], function() {
         .src(config.images)
         .pipe($.imagemin({optimizationLevel: 4}))
         .pipe(gulp.dest(config.build + 'images'));
-});
-
-gulp.task('sass-watcher', function() {
-    gulp.watch([config.sass], ['styles']);
 });
 
 gulp.task('clean', function(done) {
@@ -211,8 +207,8 @@ function startBrowserSync(isDev) {
         port: 3000,
         files: isDev ? [
             config.client + '**/*.*',
-            '!' + config.sass, 
-            config.temp + '**/*.css',
+            '!' + config.sass,
+            config.temp + 'style.css',
         ] : [],
         ghostMode: {
             clicks: true,
