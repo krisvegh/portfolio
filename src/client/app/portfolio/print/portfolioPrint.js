@@ -1,10 +1,20 @@
 (function() {
-	'use strict';
-	var app = angular.module('app');
+'use strict';
 
-	var portfolioPrintController = function($scope) {
+	angular
+		.module('app')
+		.controller('portfolioPrintController', portfolioPrintController);
 
-	};
+	portfolioPrintController.$inject = ['$scope', 'portfolioPrintService'];
+	function portfolioPrintController($scope, portfolioPrintService) {
+		var vm = this;
+		vm.data = portfolioPrintService.getData;
+		console.log(vm.data);
 
-	app.controller('portfolioPrintController', portfolioPrintController);
+		activate();
+
+		////////////////
+
+		function activate() { }
+	}
 })();
