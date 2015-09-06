@@ -75,3 +75,6 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
+# sass cache #
+######################
+#.sass-cache
