@@ -301,7 +301,7 @@ p {
     }
 }
 
-#portfolio_print {
+#portfolio_print, #portfolio_web {
     background: none;
 }
 
@@ -315,6 +315,13 @@ p {
         margin: 5px 0;
         z-index: -1;
         position: relative;
+    }
+    
+    a {
+        width: 400px;
+        height: 100px;
+        display: block;
+        position: absolute;
     }
 } 
 

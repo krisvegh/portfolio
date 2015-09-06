@@ -77,4 +77,8 @@ Thumbs.db
 
 # sass cache #
 ######################
-#.sass-cache
+.sass-cache
+
+# working Files #
+######################
+working_files
