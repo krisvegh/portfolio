@@ -1,6 +1,5 @@
 // scss-lint:disable Indentation ColorVariable PropertySortOrder IdSelector SingleLinePerSelector NameFormat
 @import url(http://fonts.googleapis.com/css?family=Dosis:400,700|Poiret+One);
-@import 'normalize';
 @import 'animations';
 @import 'transitions';
 
@@ -52,6 +51,7 @@ p {
 .circles {
     position: absolute;
     pointer-events: none;
+    z-index: -5;
 }
 
 #c1 {
@@ -110,7 +110,7 @@ p {
 .icon {
     width: 40px;
     height: 33px;
-    top: 10px;
+    top: 6px;
     left: 6px;
     position: relative;
 
@@ -159,7 +159,7 @@ p {
     img {
         width: 40px;
         height: 33px;
-        top: 10px;
+        top: 6px;
         left: 6px;
         position: relative;
     }
@@ -264,27 +264,32 @@ p {
     text-align: center;
     color: #000;
     background-color: rgba(20, 20, 20, .05);
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     box-shadow: inset 0 0 15px #444;
-
-    div {
-        display: inline-block;
-        width: 80%;
-    }
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
 
 :target {
     display: block;
 }
 
-#portfolio {
-    background: none;
-    box-shadow: none;
+.introduction {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 13%;
+}
 
-    div {
-        width: 60%;
-    }
+#portfolio {
+    width: 24%;
+    display: block;
+    position: absolute;
+    top: 320px;
+    left: 50%;
 
     a {
         width: 45%;
@@ -295,6 +300,23 @@ p {
         }
     }
 }
+
+#portfolio_print {
+    background: none;
+}
+
+.portfolioitem {
+     cursor: pointer;
+     
+    div {
+        width: 400px;
+        height: 100px;
+        border: 3px solid #fff;
+        margin: 5px 0;
+        z-index: -1;
+        position: relative;
+    }
+} 
 
 #skills {
     width: 360px;

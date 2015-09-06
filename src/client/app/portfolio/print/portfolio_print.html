@@ -1,3 +1,13 @@
-<div>
-	{{$vm.data.color}}
+<div class="contentbox" id="portfolio_print"> 
+	<div class="portfolioitem" ng-repeat="item in vm.data" ng-click="vm.lightbox($index)">
+		<div>
+			<img alt="{{item.title}}" width="400px" height="100px"
+				ng-src="/app/portfolio/print/PortfDir{{$index + 1}}/thumb.jpg"
+				>
+		</div>
+	</div>
 </div>
+<a href="/portfolio" id="backbutton">
+	<img src="/images/back.svg" alt="">
+    <p>Back</p>
+</a>

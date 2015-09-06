@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-    	.module('app', ['ngRoute', 'ngAnimate'])
+    	.module('app', ['ngRoute', 'ngAnimate', 'bootstrapLightbox'])
 
     	.config(function ($routeProvider, $locationProvider) {
     		$routeProvider
@@ -21,7 +21,8 @@
     			})
                 .when('/portfolio/print', {
                     templateUrl: 'app/portfolio/print/portfolio_print.html',
-                    controller: 'portfolioPrintController'
+                    controller: 'portfolioPrintController',
+                    controllerAs: 'vm'
                 })
                 .when('/portfolio/web', {
                     templateUrl: 'app/portfolio/web/portfolio_web.html',

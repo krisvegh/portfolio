@@ -5,16 +5,24 @@
 		.module('app')
 		.controller('portfolioPrintController', portfolioPrintController);
 
-	portfolioPrintController.$inject = ['$scope', 'portfolioPrintService'];
-	function portfolioPrintController($scope, portfolioPrintService) {
-		var vm = this;
-		vm.data = portfolioPrintService.getData;
-		console.log(vm.data);
+	portfolioPrintController.$inject = ['portfolioPrintService', 'Lightbox'];
 
-		activate();
+	function portfolioPrintController(portfolioPrintService, Lightbox) {
+		var vm = this;
+		vm.data = portfolioPrintService;
+		vm.lightbox = function(item) {
+			Lightbox.openModal(getImageArray(item), 0);
+		}
 
 		////////////////
-
-		function activate() { }
+		function getImageArray(item) {
+			var imageArray = [];
+			
+			for (var i = 0; i < vm.data[item].img; i++) {
+				imageArray.push('/app/portfolio/print/PortfDir' + (item+1) + '/' + ('00' + (i+1)).slice(-3) + '.jpg');
+			}
+			
+			return imageArray;
+		}
 	}
 })();
