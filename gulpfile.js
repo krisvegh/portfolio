@@ -192,7 +192,7 @@ function startBrowserSync(isDev) {
     log('Starting browsersync on port ' + port);
 
     if (isDev) {
-        gulp.watch([config.scss], ['styles'])
+        gulp.watch([config.client + 'scss/*.*'], ['styles'])
             .on('change', function(event) {
                 changeEvent(event);
             });

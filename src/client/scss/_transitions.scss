@@ -19,7 +19,7 @@
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;
     -ms-transition-delay: 0.2s;
-    -o-transition-delay: 0.12;
+    -o-transition-delay: 0.2;
     transition-delay: 0.2s;	
 }
 
@@ -27,7 +27,7 @@
     -webkit-transition-delay: 0.3s;
     -moz-transition-delay: 0.3s;
     -ms-transition-delay: 0.3s;
-    -o-transition-delay: 0.13;
+    -o-transition-delay: 0.3;
     transition-delay: 0.3s;	
 }
 
@@ -35,19 +35,29 @@
     -webkit-transition-delay: 0.4s;
     -moz-transition-delay: 0.4s;
     -ms-transition-delay: 0.4s;
-    -o-transition-delay: 0.14;
+    -o-transition-delay: 0.4;
     transition-delay: 0.4s;	
 }
 
-.theview.ng-enter,
-.theview.ng-leave {
-    transition: all 5s linear;
+.theview {
+    transition: all .2s linear;
+    display: block;
+    position: relative;
+    left: 0;
 }
 
+.theview.ng-leave.theview.ng-leave-active,
 .theview.ng-enter {
+    position: relative;
+    display: block;
+    left: 10px;
     opacity: 0;
 }
 
-.theview.ng-leave {
-    opacity: 1;
-}
+// .theview.ng-enter.theview.ng-enter.active,
+// .theview.ng-enter {
+//     position: relative;
+//     display: block;
+//     left: 0px;
+//     opacity: 1;
+// }
