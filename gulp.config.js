@@ -25,7 +25,7 @@ module.exports = function() {
             clientApp + '**/*.js',            //then the rest
             '!' + clientApp + '**/*.spec.js'  //exclude test JS files
         ],
-        sass: client + 'scss/style.scss',
+        scss: client + 'scss/style.scss',
         server: server,
         temp: temp,
  

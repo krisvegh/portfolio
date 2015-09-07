@@ -39,62 +39,15 @@
     transition-delay: 0.4s;	
 }
 
-.scaleToZero {
-	-webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);  
-
-    -webkit-transition: -webkit-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    -moz-transition: -moz-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    -ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
-    -o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-
-    box-shadow: inset 0px 0px 0px #C0C0C0;
+.theview.ng-enter,
+.theview.ng-leave {
+    transition: all 5s linear;
 }
 
-.scaleTodefault {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);  
-
-    -webkit-transition: -webkit-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    -moz-transition: -moz-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    -ms-transition: -ms-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important; /* IE10 is actually unprefixed */
-    -o-transition: -o-transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
-    transition: transform .3s cubic-bezier(0.34,1,0.71,1) 0s !important;
+.theview.ng-enter {
+    opacity: 0;
 }
 
-.transitioned {
-    -webkit-transition: -webkit-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0s !important;
-    -moz-transition: -moz-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0s !important;
-    -ms-transition: -ms-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0s !important; /* IE10 is actually unprefixed */
-    -o-transition: -o-transform .5s cubic-bezier(.09, .81, .31, 1.23) 0s !important;
-    transition: transform .5s cubic-bezier(.09, .81, .31, 1.23) 0s !important;    
+.theview.ng-leave {
+    opacity: 1;
 }
-
-.scaleTo0_8 {
-    -webkit-transform: scale(.8);
-    -moz-transform: scale(.8);
-    -ms-transform: scale(.8);
-    -o-transform: scale(.8);
-    transform: scale(.8);      
-}
-
-.scaleTo1_2 {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);      
-}
-
-
-.shadow {
-    box-shadow: inset 3px 3px 5px #C0C0C0 !important;
-}
-

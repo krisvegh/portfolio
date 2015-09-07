@@ -22,8 +22,9 @@ gulp.task('vet', function() {
         .pipe($.jshint.reporter('fail'));
 });
 
-gulp.task('styles', ['clean-styles'], function() {
-    return $.rubySass(config.sass, {sourcemap: true})
+gulp.task('styles', function() {
+    log('Compiling scss to css into the temp folder.');
+    return $.rubySass(config.scss, {sourcemap: true})
         .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.temp));
@@ -191,12 +192,12 @@ function startBrowserSync(isDev) {
     log('Starting browsersync on port ' + port);
 
     if (isDev) {
-        gulp.watch([config.sass], ['styles'])
+        gulp.watch([config.scss], ['styles'])
             .on('change', function(event) {
                 changeEvent(event);
             });
     } else {
-        gulp.watch([config.sass, config.js, config.html], ['optimize', browsersync.reload])
+        gulp.watch([config.scss, config.js, config.html], ['optimize', browsersync.reload])
             .on('change', function(event) {
                 changeEvent(event);
             });        
@@ -205,11 +206,14 @@ function startBrowserSync(isDev) {
     var options = {
         proxy: 'localhost:' + port,
         port: 3000,
-        files: isDev ? [
-            config.client + '**/*.*',
-            '!' + config.sass,
-            config.temp + 'style.css',
-        ] : [],
+        files: isDev ? 
+        [
+            config.client + '/**/*.html',
+            config.client + '/**/*.js',
+            '!' + config.scss,
+            config.css,
+        ] 
+        : [],
         ghostMode: {
             clicks: true,
             location: false,
