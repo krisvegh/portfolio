@@ -1,7 +1,8 @@
 (function() {
 	var app = angular.module('app');
 
-	var mainMenuController = function($scope) {
+	/* @ngInject */
+	var mainMenuController = function() {
 		
 	};
 
