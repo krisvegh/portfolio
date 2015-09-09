@@ -40,24 +40,36 @@
 }
 
 .theview {
-    transition: all .2s linear;
+    transition: all .3s linear;
     display: block;
     position: relative;
-    left: 0;
 }
 
 .theview.ng-leave.theview.ng-leave-active,
 .theview.ng-enter {
-    position: relative;
-    display: block;
-    left: 10px;
-    opacity: 0;
+    
+     opacity: 0;
+     
+    .contentbox {
+        box-shadow: none;
+    }
+    
+    .navbutton {
+        transform: scale(.8) !important;
+    }
+
 }
 
-// .theview.ng-enter.theview.ng-enter.active,
-// .theview.ng-enter {
-//     position: relative;
-//     display: block;
-//     left: 0px;
-//     opacity: 1;
-// }
+.theview.ng-enter.theview.ng-enter.active,
+.theview.ng-leave {
+
+    opacity: 1;
+    
+    .contentbox {
+        box-shadow: inset 0 0 15px #444;
+    }
+    
+    .navbutton {
+        transform: scale(1)  !important;
+    }
+}
