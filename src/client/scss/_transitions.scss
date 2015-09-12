@@ -1,75 +1,118 @@
-.trans_delay_0ms {
-    -webkit-transition-delay: 0.0s;
-    -moz-transition-delay: 0.0s;
-    -ms-transition-delay: 0.0s;
-    -o-transition-delay: 0.0s;
-    transition-delay: 0.0s;	
+.navbutton {
+     transition: transform 1s cubic-bezier(.21,.99,.32,1.13), opacity .5s linear;
 }
 
-
-.trans_delay_1ms {
-    -webkit-transition-delay: 0.1s;
-    -moz-transition-delay: 0.1s;
-    -ms-transition-delay: 0.1s;
-    -o-transition-delay: 0.1s;
-    transition-delay: 0.1s;	
+.contentbox {
+    transition: opacity 1s ease, box-shadow 2s linear;
 }
 
-.trans_delay_2ms {
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -ms-transition-delay: 0.2s;
-    -o-transition-delay: 0.2;
-    transition-delay: 0.2s;	
+.sectiontitle {
+    transition: opacity 1s ease, transform 1s ease-out;
 }
 
-.trans_delay_3ms {
-    -webkit-transition-delay: 0.3s;
-    -moz-transition-delay: 0.3s;
-    -ms-transition-delay: 0.3s;
-    -o-transition-delay: 0.3;
-    transition-delay: 0.3s;	
+#portfolio, #skills {
+    transition: opacity 1s ease;
 }
 
-.trans_delay_4ms {
-    -webkit-transition-delay: 0.4s;
-    -moz-transition-delay: 0.4s;
-    -ms-transition-delay: 0.4s;
-    -o-transition-delay: 0.4;
-    transition-delay: 0.4s;	
+#title {
+        
+    transition: opacity 1s ease;
+    
+    &.ng-hide-add, 
+    &.ng-hide-remove-active {
+        opacity: 1;
+    }
+    
+    &.ng-hide-remove,
+    &.ng-hide-add-active {
+        opacity: 0;
+    }
 }
 
 .theview {
-    transition: all .3s linear;
-    display: block;
-    position: relative;
-}
-
-.theview.ng-leave.theview.ng-leave-active,
-.theview.ng-enter {
     
-     opacity: 0;
-     
-    .contentbox {
-        box-shadow: none;
+    &.ng-leave,
+    &.ng-enter-active {
+        transition: opacity 1s ease;
+        opacity: 1;
+        
+        .navbutton {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .contentbox {
+            opacity: 1;
+            box-shadow: inset 0 0 15px #444;
+        }
+        
+        .sectiontitle {
+            opacity: 1;
+            transform: translate(0px);
+        }
     }
     
-    .navbutton {
-        transform: scale(.8) !important;
+    &.ng-enter,
+    &.ng-leave-active {
+        opacity: 0;
+        
+        .navbutton {
+            
+            opacity: 0;
+                        
+            &#homebutton {
+                transform: scale(.1);
+                transition-delay: 0s;
+            }
+            
+            &#contactbutton {
+                transform: scale(.1);
+                transition-delay: .05s;
+            }
+            
+            &#portfoliobutton {
+                transform: scale(.1);
+                transition-delay: .1s;
+            }
+            
+            &#skillsbutton {
+                transform: scale(.1);
+                transition-delay: .15s;
+            }
+            
+            &#cvbutton {
+                transform: scale(.1);
+                transition-delay: .20s;
+            }
+                   
+            p {
+                opacity: 0;
+                transition-duration: .2s;
+            }
+        }
+        
+        .contentbox {
+            opacity: 0;
+            box-shadow: none;
+        }
+        
+        #portfolio, #skills {
+            opacity: 0;
+        }
+        
     }
-
-}
-
-.theview.ng-enter.theview.ng-enter.active,
-.theview.ng-leave {
-
-    opacity: 1;
     
-    .contentbox {
-        box-shadow: inset 0 0 15px #444;
+    &.ng-enter {
+        .sectiontitle {
+            opacity: 0;
+            transform: translate(30px);
+        }
     }
     
-    .navbutton {
-        transform: scale(1)  !important;
+    &.ng-leave-active {
+        .sectiontitle {
+            opacity: 0;
+            transform: translate(-30px);
+        }
     }
 }

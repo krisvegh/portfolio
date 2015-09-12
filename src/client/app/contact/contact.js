@@ -1,9 +1,11 @@
 (function() {
 
 	var app = angular.module('app');
-
-	var contactController = function($scope) {
-
+	
+	/* @ngInject */
+	var contactController = function($rootScope) {
+		$rootScope.title = false;
+		$rootScope.pageTitle = 'KV | Contact';
 	};
 
 	app.controller('contactController', contactController);

@@ -1,8 +1,10 @@
 (function() {
 	var app = angular.module('app');
 
-	var portfolioController = function($scope) {
-
+	/* @ngInject */
+	var portfolioController = function($rootScope) {
+		$rootScope.title = false;
+		$rootScope.pageTitle = 'KV | Portfolio';
 	};
 
 	app.controller('portfolioController', portfolioController); 

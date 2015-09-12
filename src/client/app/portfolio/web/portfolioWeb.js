@@ -1,13 +1,12 @@
 (function() {
-'use strict';
 
-	angular
-		.module('app')
-		.controller('portfolioWebController', portfolioWebController);
+	var app = angular.module('app');
+	
+	/* @ngInject */
+	var portfolioWebController = function($rootScope) {
+		$rootScope.title = false;
+		$rootScope.pageTitle = 'KV | Web';
+	};
 
-	portfolioWebController.$inject = [];
-	function portfolioWebController() {
-	}
-		////////////////
-
+	app.controller('portfolioWebController', portfolioWebController);
 })();

@@ -1,8 +1,12 @@
+<h2 class="sectiontitle">Print</h2>
+<div id="middle" ng-hide="title">
+	<img src="images/portfolio.svg" alt="portfolio">
+</div>
 <div class="contentbox" id="portfolio_print"> 
 	<div class="portfolioitem" ng-repeat="item in vm.data" ng-click="vm.lightbox($index)">
 		<div>
 			<img alt="{{item.title}}" width="400px" height="100px"
-				ng-src="/app/portfolio/print/PortfDir{{$index + 1}}/thumb.jpg"
+				ng-src="/images/portfolio/PortfDir{{$index + 1}}/thumb.jpg"
 				>
 		</div>
 	</div>

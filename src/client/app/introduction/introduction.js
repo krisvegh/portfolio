@@ -1,8 +1,10 @@
 (function() {
 	var app = angular.module('app');
 
-	var introductionController = function($scope) {
-		
+	/* @ngInject */
+	var introductionController = function($rootScope) {
+		$rootScope.title = false;
+		$rootScope.pageTitle = 'KV | Intro';		
 	};
 
 	app.controller('introductionController', introductionController); 

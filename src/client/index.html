@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome = 1" />
-    <title>Krisztian Vegh</title>
+    <title ng-bind="pageTitle"></title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" name="viewport">
     <base href="/">
 
@@ -23,24 +23,15 @@
 </head>
 
 <body>
-    <div class="circles anim_delay_3ms transitioned" id="c1"><img alt="circle" src="./images/01.svg"></div>
-    <div class="circles anim_delay_2ms transitioned" id="c2"><img alt="circle" src="./images/02.svg"></div>
-    <div class="circles anim_delay_1ms transitioned" id="c3"><img alt="circle" src="./images/03.svg"></div>
-    <div class="circles anim_delay_0ms transitioned" id="c4"><img alt="circle" src="./images/04.svg"></div>
-    <div class="scaleToZero" id="middle"></div>
-    <div id="title">
+    <div class="circles" id="c1"><img alt="circle" src="./images/01.svg"></div>
+    <div class="circles" id="c2"><img alt="circle" src="./images/02.svg"></div>
+    <div class="circles" id="c3"><img alt="circle" src="./images/03.svg"></div>
+    <div class="circles" id="c4"><img alt="circle" src="./images/04.svg"></div>
+    <div id="title" ng-show="title">
         <h1>Krisztian Vegh</h1>
         <h2>Web - Design - Print</h2>
     </div>
  
-    <div >
-        <p class="pagetitle" id="title_home">Introduction</p>
-        <p class="pagetitle" id="title_contact">Contact</p>
-        <p class="pagetitle" id="title_portfolio">Portfolio</p>
-        <p class="pagetitle" id="title_skills">Skills</p>
-        <p class="pagetitle" id="title_cv">CV</p>
-    </div>
-
     <ng-view class="theview"></ng-view>
 
     <!-- build:js js/lib.js -->

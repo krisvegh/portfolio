@@ -26,7 +26,7 @@
                 })
                 .when('/portfolio/web', {
                     templateUrl: 'app/portfolio/web/portfolio_web.html',
-                    controller: 'portfolioWebController'
+                    controller: 'portfolioWebController',
                 })
     			.when('/skills', {
 					templateUrl: 'app/skills/skills.html',
