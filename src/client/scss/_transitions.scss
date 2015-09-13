@@ -10,7 +10,7 @@
     transition: opacity 1s ease, transform 1s ease-out;
 }
 
-#portfolio, #skills {
+#portfolio, #skills, #middle {
     transition: opacity 1s ease;
 }
 
@@ -96,7 +96,7 @@
             box-shadow: none;
         }
         
-        #portfolio, #skills {
+        #portfolio, #skills, #middle {
             opacity: 0;
         }
         

@@ -35,7 +35,7 @@ module.exports = function() {
         templateCache: {
             file: 'templates.js',
             options: {
-                module: 'app.core',
+                module: 'app',
                 standAlone: false,
                 root: 'app/' //Don't create a separate module for this as it's already exist. 
             }
