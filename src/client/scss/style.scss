@@ -326,7 +326,7 @@ p {
     top: 180px;
     position: absolute;
     display: inline-block;
-    height: 420px;
+    height: 400px;
     overflow: auto;
 
     #fcp {
@@ -347,6 +347,7 @@ canvas {
     margin: 15px auto;
     border-radius: 40px 0 0 40px;
     z-index: 0;
+    box-shadow: inset 2px 2px 10px #888;
 }
 
 .skillicons {
@@ -355,15 +356,16 @@ canvas {
     margin-top: 10px;
     margin-left: 10px;
     display: inline-block;
-    float: left;
-    border-radius: 20px;
+    border-radius: 50%;
+    background-size: contain !important;
 }
 
 .skillinfo {
     display: inline-block;
     height: 60px;
-    width: 105px;
-    float: left;
+    width: 180px;
+    position: relative;
+    top: -11px;
 }
 
 .skilltitle {
@@ -389,52 +391,67 @@ canvas {
     pointer-events: none;
 }
 
+#powered {
+    position: fixed;
+    margin: 10px;
+    right: 0px;
+    font-size: 90%;
+    
+    img {
+        width: 20px;
+    }
+}
+
 #icon-ps {
     background: url('../images/skill_ps.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-indd {
     background: url('../images/skill_indd.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-ai {
     background: url('../images/skill_ai.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-html {
     background: url('../images/skill_html.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-css {
     background: url('../images/skill_css.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-js {
     background: url('../images/skill_js.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-php {
     background: url('../images/skill_php.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-mysql {
     background: url('../images/skill_mysql.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-sass {
     background: url('../images/skill_sass.png') center center no-repeat #fff;
-    background-size: contain;
 }
 
 #icon-fcp {
     background: url('../images/skill_fcp.png') center center no-repeat #fff;
-    background-size: contain;
+}
+
+#icon-jq {
+    background: url('../images/skill_jq.svg') center center no-repeat #fff;
+}
+
+#icon-ang {
+    background: url('../images/skill_angular.svg') center center no-repeat #fff;
+    background-size: 80% !important;
+}
+
+#icon-gulp {
+    background: url('../images/skill_gulp.png') center center no-repeat #fff;
+    background-size: 40% !important;
 }
