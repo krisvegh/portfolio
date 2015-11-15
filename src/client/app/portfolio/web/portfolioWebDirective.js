@@ -3,7 +3,9 @@
 
 	angular
 		.module('app')
-		.directive('feralmanual', feralmanual);
+		.directive('feralmanual', feralmanual)
+		.directive('feralminisite', feralminisite)
+		;
 
 	feralmanual.$inject = [];
 	function feralmanual() {
@@ -13,7 +15,6 @@
 		// Creates:
 		// A list item with the link to the manual.  
 		var directive = {
-//			link: link,
 			restrict: 'AE',
 			scope: {
 				'gamecode': '@'
@@ -22,4 +23,16 @@
 		};
 		return directive;
 	}
+	
+	function feralminisite() {
+		var directive = {
+			restrict: 'AE',
+			scope: {
+				'gamecode': '@'
+			},
+			templateUrl: 'app/portfolio/web/feralminisite.html'
+		};
+		return directive;
+	}
+	
 })();
