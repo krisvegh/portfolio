@@ -33,7 +33,7 @@
     
     &.ng-leave,
     &.ng-enter-active {
-        transition: opacity 1s ease;
+        transition: all 1s ease;
         opacity: 1;
         
         .navbutton {
@@ -54,6 +54,7 @@
     
     &.ng-enter,
     &.ng-leave-active {
+        transition: all .5s ease;
         opacity: 0;
         
         .navbutton {
@@ -106,6 +107,10 @@
         .sectiontitle {
             opacity: 0;
             transform: translate(30px);
+        }
+        
+        * {
+            box-sizing: initial;
         }
     }
     

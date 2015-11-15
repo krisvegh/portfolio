@@ -259,6 +259,7 @@ p {
     box-shadow: inset 0 0 15px #444;
     overflow-y: auto;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 :target {
@@ -287,8 +288,12 @@ p {
     left: 50%;
 
     a {
-        width: 45%;
+        width: 35%;
         display: inline-block;
+        
+        &:first-child {
+            margin-right: 3em;
+        }
 
         h2 {
             font-size: 35px;
@@ -399,6 +404,7 @@ canvas {
     
     img {
         width: 20px;
+        height: 20px;
     }
 }
 
