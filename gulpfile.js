@@ -26,6 +26,7 @@ gulp.task('styles', function() {
     log('Compiling scss to css into the temp folder.');
     return gulp.src(config.scss)
         .pipe($.sourcemaps.init())
+        .pipe($.sass().on('error', $.sass.logError))
         .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.temp));
