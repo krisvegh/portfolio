@@ -1,4 +1,3 @@
-/// <reference path="../../../typings/angularjs/angular.d.ts" />
 (function() {
     'use strict';
 
@@ -37,7 +36,7 @@
                     controller: 'mainMenuController'
     			})
                 .otherwise('/main', {
-                    
+
                 });
 
     		$locationProvider
