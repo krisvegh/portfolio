@@ -2,7 +2,7 @@
   "name": "krisvegh",
   "version": "1.0.0",
   "description": "Krisvegh Porfolio Site",
-  "main": "index.js",
+  "main": "src/server/app.js",
   "dependencies": {
     "body-parser": "^1.8.2",
     "compression": "^1.1.0",
